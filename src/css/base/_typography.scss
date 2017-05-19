@@ -1,0 +1,29 @@
+// Typography
+@import url('https://fonts.googleapis.com/css?family=Overpass+Mono');
+
+
+// EXAMPLE FONT MIXIN
+// @mixin f-futura-pt-reg {
+// 	font : {
+// 		family: 'futura-pt', sans-serif;
+// 		weight: 900;
+// 		style: normal;
+// 	}
+// }
+
+// Setting default font size for rem
+
+html {
+	font-size: 62.5%;
+	font-family: 'Overpass Mono', monospace;
+}
+
+body {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	font-size: 1.2rem;
+}
+
+a {
+	color: inherit;
+}
