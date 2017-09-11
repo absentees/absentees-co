@@ -14,6 +14,9 @@ import runSequence from 'run-sequence';
 import webpack from 'webpack-stream';
 var browserSync = require('browser-sync').create();
 var Metalsmith = require('metalsmith');
+var collections = require('metalsmith-collections');
+var layouts     = require('metalsmith-layouts');
+var metalsmithMarkdown    = require('metalsmith-markdown');
 
 const imageminPngquant = require('imagemin-pngquant');
 
@@ -32,10 +35,7 @@ var nunjucksEnv = nunjucks.configure('./src/html/views', {
 	throwOnUndefined: false,
 	noCache: true
 });
-/* Enable Mardown parseing */
-var markdown = require('nunjucks-markdown');
-var marked = require('marked');
-markdown.register(nunjucksEnv, marked);
+
 
 // Handlebar helpers for revisioned asset paths and content
 const handlebarOpts = {
@@ -149,14 +149,17 @@ gulp.task('metalsmith', function (cb) {
 		.source('src/html/pages')
 		.destination(dist)
 		.clean(false)
-		.use(require('metalsmith-metadata-directory')({
-			directory: 'src/html/data/**/*.json',
+		.use(collections({
+			sites: 'sites/*.md'
 		}))
-		.use(require('metalsmith-layouts')({
+		.use(metalsmithMarkdown())
+		.use(layouts({
 			'engine': 'nunjucks',
 			'directory': 'src/html/views',
 			'rename': true
 		}))
+		.use(require('metalsmith-permalinks'))
+
 		.build(function (err) {
 			if (err) {
 				throw err;
@@ -196,11 +199,11 @@ gulp.task('stylesheets', ['javascript'], (done) => {
 		.pipe($.sass({
 			style: 'expanded',
 			includePaths: paths .concat(require('node-neat').includePaths)
-			
-			
+
+
 			.concat(require('node-normalize-scss').includePaths)
-			
-			
+
+
 		}))
 		.on('error', $.sass.logError)
 		.on('error', function (e) {
@@ -279,4 +282,3 @@ gulp.task("build", function (callback) {
 gulp.task('publish', function () {
 
 });
-

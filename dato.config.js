@@ -6,22 +6,23 @@
 const util = require('util');
 const fs = require('fs');
 module.exports = (dato, root, i18n) => {
-	root.directory("src/html/data", (dir) => {
-		writeExampleContent(dir,dato);
+
+	// Clients
+	root.directory("src/html/pages/clients", (clientDir) => {
+		var clientList = [];
+		dato.clients.forEach((client) => {
+			clientList.push(client.name);
+		});
+
+		clientDir.createPost(
+			`index.md`, "yaml", {
+				frontmatter: {
+					title: "Client List"
+				},
+				content: clientList
+			}
+		);
 	});
+
+
 };
-
-function writeExampleContent(dir,dato) {
-	let results = [];
-	dato.contentCollectionName.forEach((contentTypeName) => {
-		const el = contentTypeName.toMap();
-
-		const content = {
-			title: el.title,
-			text: el.text
-		};
-		results.push(content);
-	});
-
-	dir.createDataFile('example_content.json', 'json', results);
-}
