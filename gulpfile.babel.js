@@ -149,17 +149,16 @@ gulp.task('metalsmith', function (cb) {
 		.source('src/html/pages')
 		.destination(dist)
 		.clean(false)
-		.use(collections({
-			sites: 'sites/*.md'
-		}))
+		// .use(collections({
+		// 	sites: 'sites/*.md'
+		// }))
 		.use(metalsmithMarkdown())
 		.use(layouts({
 			'engine': 'nunjucks',
 			'directory': 'src/html/views',
 			'rename': true
 		}))
-		.use(require('metalsmith-permalinks'))
-
+		// .use(require('metalsmith-permalinks'))
 		.build(function (err) {
 			if (err) {
 				throw err;

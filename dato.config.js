@@ -17,9 +17,10 @@ module.exports = (dato, root, i18n) => {
 		clientDir.createPost(
 			`index.md`, "yaml", {
 				frontmatter: {
-					title: "Client List"
-				},
-				content: clientList
+					title: "Client List",
+					clients: clientList,
+					layout: 'clients.njk'
+				}
 			}
 		);
 	});
