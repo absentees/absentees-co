@@ -36,7 +36,12 @@ h3 {
 }
 
 h2 {
-	text-decoration: underline;
+	margin: 0;
+	padding-left: 1rem;
+
+	color: white;
+	background-color: black;
+	line-height: 2em;
 }
 
 p {

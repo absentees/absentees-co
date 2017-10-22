@@ -11,20 +11,3 @@ html {
 
 	position: relative;
 }
-
-.tile {
-	@include grid-container;
-
-	border-bottom: 1px solid black;
-
-	.left,
-	.right {
-		@include grid-column(6);
-	}
-
-	.right {
-		img {
-			width: 100%;
-		}
-	}
-}

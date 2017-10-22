@@ -8,6 +8,13 @@ const fs = require('fs');
 
 module.exports = (dato, root, i18n) => {
 
+	// Create a YAML data file to store global data about the site
+	root.createDataFile('src/data/settings.yml', 'yaml', {
+		name: dato.site.globalSeo.siteName,
+		faviconMetaTags: dato.site.faviconMetaTags,
+		seoMetaTags: dato.site.seoMetaTags
+	});
+
 	// Clients
 	root.directory("src/html/pages/clients", (clientDir) => {
 		var clientList = [];

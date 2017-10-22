@@ -12,11 +12,12 @@ import vsource from "vinyl-source-stream";
 import vbuffer from "vinyl-buffer";
 import runSequence from 'run-sequence';
 import webpack from 'webpack-stream';
-var browserSync = require('browser-sync').create();
-var Metalsmith = require('metalsmith');
-var collections = require('metalsmith-collections');
-var layouts     = require('metalsmith-layouts');
-var metalsmithMarkdown    = require('metalsmith-markdown');
+var browserSync 			= require('browser-sync').create();
+var Metalsmith 				= require('metalsmith');
+var collections 			= require('metalsmith-collections');
+var layouts     			= require('metalsmith-layouts');
+var metadata				= require('metalsmith-metadata');
+var metalsmithMarkdown    	= require('metalsmith-markdown');
 
 const imageminPngquant = require('imagemin-pngquant');
 
@@ -152,6 +153,9 @@ gulp.task('metalsmith', function (cb) {
 		.use(collections({
 			projects: 'projects/*.md',
 			sideProjects: 'sideProjects/*.md'
+		}))
+		.use(metadata({
+			settings: 'data/settings.yml'
 		}))
 		.use(metalsmithMarkdown())
 		.use(layouts({
