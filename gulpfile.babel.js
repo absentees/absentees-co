@@ -149,9 +149,10 @@ gulp.task('metalsmith', function (cb) {
 		.source('src/html/pages')
 		.destination(dist)
 		.clean(false)
-		// .use(collections({
-		// 	sites: 'sites/*.md'
-		// }))
+		.use(collections({
+			projects: 'projects/*.md',
+			sideProjects: 'sideProjects/*.md'
+		}))
 		.use(metalsmithMarkdown())
 		.use(layouts({
 			'engine': 'nunjucks',
