@@ -1,18 +1,11 @@
 .tile {
 	@include grid-container;
 
-    padding: 8rem 0;
+	padding: 8rem 0;
 
 	border-bottom: 1px solid black;
 
-	.left,
-	.right {
-		@include grid-column(6);
-	}
-
-	.right {
-		img {
-			width: 100%;
-		}
+	&:first-of-type {
+		padding-top: 0;
 	}
 }

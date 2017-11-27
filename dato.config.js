@@ -45,7 +45,7 @@ module.exports = (dato, root, i18n) => {
 						client: project.client.name,
 						url: project.url,
 						description: project.description,
-						screenshot: project.screenshot.url({ w: 400, h: 300, fm: 'pjpg' })
+						screenshot: project.screenshot.url({ w: 800, h: 450, fm: 'pjpg',  fit: 'crop', crop: 'top' })
 					}
 				}
 			);
@@ -63,7 +63,7 @@ module.exports = (dato, root, i18n) => {
 				project.images.forEach(screenshot => {
 					screenshotCollection.push({
 						title: screenshot.title,
-						url: screenshot.url({ w: 400, h: 300, fm: 'pjpg' })
+						url: screenshot.url({ w: 800, h: 450, fm: 'pjpg', fit: 'crop', crop: 'top' })
 					});	
 				});	
 			}

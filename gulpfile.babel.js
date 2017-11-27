@@ -150,12 +150,12 @@ gulp.task('metalsmith', function (cb) {
 		.source('src/html/pages')
 		.destination(dist)
 		.clean(false)
+		.use(metadata({
+			settings: 'src/data/settings.yml'
+		  }))
 		.use(collections({
 			projects: 'projects/*.md',
 			sideProjects: 'sideProjects/*.md'
-		}))
-		.use(metadata({
-			settings: 'data/settings.yml'
 		}))
 		.use(metalsmithMarkdown())
 		.use(layouts({

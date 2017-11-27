@@ -2,6 +2,7 @@
 
 {% block content %}
 
+<main>
 <h2>Selected Client Projects</h2>
 
 {% for project in projects %}
@@ -12,5 +13,5 @@
 {% for project in sideProjects %}
     {% include "partials/tile.njk" %}
 {% endfor %}
-
+</main>
 {% endblock %}
