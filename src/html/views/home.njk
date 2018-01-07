@@ -3,15 +3,18 @@
 {% block content %}
 
 <main>
-<h2>Selected Client Projects</h2>
+    <section>
+        <h2>Selected Client Projects</h2>
 
-{% for project in projects %}
-    {% include "partials/tile.njk" %}
-{% endfor %}
-
-<h2>Side Projects</h2>
-{% for project in sideProjects %}
-    {% include "partials/tile.njk" %}
-{% endfor %}
+        {% for project in projects %}
+            {% include "partials/tile.njk" %}
+        {% endfor %}
+    </section>
+    <section>
+        <h2>Side Projects</h2>
+        {% for project in sideProjects %}
+            {% include "partials/tile.njk" %}
+        {% endfor %}
+    </section>
 </main>
 {% endblock %}

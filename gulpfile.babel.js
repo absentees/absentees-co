@@ -16,7 +16,7 @@ var browserSync 			= require('browser-sync').create();
 var Metalsmith 				= require('metalsmith');
 var collections 			= require('metalsmith-collections');
 var layouts     			= require('metalsmith-layouts');
-var metadata				= require('metalsmith-metadata');
+var metadata				= require('metalsmith-metadata-directory');
 var metalsmithMarkdown    	= require('metalsmith-markdown');
 
 const imageminPngquant = require('imagemin-pngquant');
@@ -151,7 +151,7 @@ gulp.task('metalsmith', function (cb) {
 		.destination(dist)
 		.clean(false)
 		.use(metadata({
-			settings: 'src/data/settings.yml'
+			directory: 'src/data/**/*.yml'
 		  }))
 		.use(collections({
 			projects: 'projects/*.md',

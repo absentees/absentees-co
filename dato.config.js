@@ -11,8 +11,8 @@ module.exports = (dato, root, i18n) => {
 	// Create a YAML data file to store global data about the site
 	root.createDataFile('src/data/settings.yml', 'yaml', {
 		name: dato.site.globalSeo.siteName,
-		faviconMetaTags: dato.site.faviconMetaTags,
-		seoMetaTags: dato.site.seoMetaTags
+		description: dato.about.bio,
+		links: dato.about.links
 	});
 
 	// Clients
@@ -57,23 +57,18 @@ module.exports = (dato, root, i18n) => {
 		dato.sideProjects.forEach((project) => {
 			console.log(project.title);
 
-			var screenshotCollection = [];
-			
-			if (project.images.length > 0) {
-				project.images.forEach(screenshot => {
-					screenshotCollection.push({
-						title: screenshot.title,
-						url: screenshot.url({ w: 800, h: 450, fm: 'pjpg', fit: 'crop', crop: 'top' })
-					});	
-				});	
+			var imageUrl;
+
+			if(project.screenshot != null) {
+				imageUrl = project.screenshot.url({ w: 800, h: 450, fm: 'pjpg',  fit: 'crop', crop: 'top' })
 			}
-			
+
 			sideProjectsDir.createPost(
 				`${project.title}.md`, "yaml", {
 					frontmatter: {
 						title: project.title,
 						description: project.description,
-						screenshots: screenshotCollection
+						screenshot: imageUrl
 					}
 				}
 			);
