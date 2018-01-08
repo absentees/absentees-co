@@ -8,3 +8,4 @@
 
 .env
 .awspublish*
+src/html/pages/**/*

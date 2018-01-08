@@ -4,9 +4,18 @@ html {
 }
 
 .container {
+	// @include grid-container;
 	width: 100%;
 	max-width: $max-width;
 	margin: 0 auto;
 
 	position: relative;
+}
+
+main {
+	margin: 8rem 0;
+
+	section {
+		@include grid-container;
+	}
 }

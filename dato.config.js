@@ -5,23 +5,73 @@
 // i18n, is useful in multi-language sites to switch between the various available locales and get back translated content;
 const util = require('util');
 const fs = require('fs');
+
 module.exports = (dato, root, i18n) => {
-	root.directory("src/html/data", (dir) => {
-		writeExampleContent(dir,dato);
+
+	// Create a YAML data file to store global data about the site
+	root.createDataFile('src/data/settings.yml', 'yaml', {
+		name: dato.site.globalSeo.siteName,
+		description: dato.about.bio,
+		links: dato.about.links
+	});
+
+	// Clients
+	root.directory("src/html/pages/clients", (clientDir) => {
+		var clientList = [];
+		dato.clients.forEach((client) => {
+			clientList.push(client.name);
+		});
+
+		clientDir.createPost(
+			`index.md`, "yaml", {
+				frontmatter: {
+					title: "Client List",
+					clients: clientList,
+					layout: 'clients.njk'
+				}
+			}
+		);
+	});
+
+	// // Projects
+	root.directory("src/html/pages/projects", (projectsDir) => {
+		dato.projects.forEach((project) => {
+			console.log(project);
+
+			projectsDir.createPost(
+				`${project.title}.md`, "yaml", {
+					frontmatter: {
+						title: project.title,
+						client: project.client.name,
+						url: project.url,
+						description: project.description,
+						screenshot: project.screenshot.url({ w: 800, h: 450, fm: 'pjpg',  fit: 'crop', crop: 'top' })
+					}
+				}
+			);
+		});
+	});
+
+	//Side Projects
+	root.directory("src/html/pages/sideProjects", (sideProjectsDir) => {
+		dato.sideProjects.forEach((project) => {
+			console.log(project.title);
+
+			var imageUrl;
+
+			if(project.screenshot != null) {
+				imageUrl = project.screenshot.url({ w: 800, h: 450, fm: 'pjpg',  fit: 'crop', crop: 'top' })
+			}
+
+			sideProjectsDir.createPost(
+				`${project.title}.md`, "yaml", {
+					frontmatter: {
+						title: project.title,
+						description: project.description,
+						screenshot: imageUrl
+					}
+				}
+			);
+		});
 	});
 };
-
-function writeExampleContent(dir,dato) {
-	let results = [];
-	dato.contentCollectionName.forEach((contentTypeName) => {
-		const el = contentTypeName.toMap();
-
-		const content = {
-			title: el.title,
-			text: el.text
-		};
-		results.push(content);
-	});
-
-	dir.createDataFile('example_content.json', 'json', results);
-}
