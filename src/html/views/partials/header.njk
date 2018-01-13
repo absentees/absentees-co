@@ -1,5 +1,5 @@
 <header>
 	<h1 class="title">{{ settings.name }}</h1>
-	<p>{{settings.description}}</p>
+	{{ settings.description | safe }}
 	{{ settings.links | safe }}
 </header>
