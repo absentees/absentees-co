@@ -9,28 +9,16 @@ const fs = require('fs');
 module.exports = (dato, root, i18n) => {
 
 	// Create a YAML data file to store global data about the site
+	var clientList = [];
+	dato.clients.forEach((client) => {
+		clientList.push(client.name);
+	});
+
 	root.createDataFile('src/data/settings.yml', 'yaml', {
 		name: dato.site.globalSeo.siteName,
 		description: dato.about.bio,
-		links: dato.about.links
-	});
-
-	// Clients
-	root.directory("src/html/pages/clients", (clientDir) => {
-		var clientList = [];
-		dato.clients.forEach((client) => {
-			clientList.push(client.name);
-		});
-
-		clientDir.createPost(
-			`index.md`, "yaml", {
-				frontmatter: {
-					title: "Client List",
-					clients: clientList,
-					layout: 'clients.njk'
-				}
-			}
-		);
+		links: dato.about.links,
+		clients: clientList
 	});
 
 	// // Projects

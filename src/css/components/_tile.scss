@@ -5,6 +5,10 @@
 
 	// border-bottom: 1px solid black;
 
+	@include grid-media($mobile) {
+		@include grid-column(12);
+	}
+
 	&:first-of-type {
 		padding-top: 0;
 	}

@@ -1,3 +1,14 @@
+$neat-grid: (
+  columns: 12,
+  gutter: 1rem,
+);
+
+$mobile: (
+  columns: 12,
+  gutter: 1rem,
+  media: 767px,
+);
+
 body,
 html {
   @include reset-box-model;
@@ -13,7 +24,7 @@ html {
 }
 
 main {
-	margin: 8rem 0;
+	margin: 4rem 0;
 
 	section {
 		@include grid-container;
