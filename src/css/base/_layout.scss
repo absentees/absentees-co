@@ -15,18 +15,10 @@ html {
 }
 
 .container {
-	// @include grid-container;
 	width: 100%;
 	max-width: $max-width;
 	margin: 0 auto;
+	padding: 0 1rem;
 
 	position: relative;
-}
-
-main {
-	margin: 4rem 0;
-
-	section {
-		@include grid-container;
-	}
 }

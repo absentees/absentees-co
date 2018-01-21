@@ -1,19 +1,47 @@
 .tile {
-	@include grid-column(6);
+	display: block;
+	width: 100%;
+	opacity: 0.3;
+	margin: 0.5em 0;
 
-	// padding: 8rem 0;
-
-	// border-bottom: 1px solid black;
-
-	@include grid-media($mobile) {
-		@include grid-column(12);
+	&:hover {
+		opacity: 1;
 	}
 
-	&:first-of-type {
-		padding-top: 0;
+	&.expand {
+		.header > img {
+			display: none;
+		}
+
+		.content {
+			display: block;
+		}
 	}
 
-	> img {
-		width: 100%;
+	.header {
+		cursor: pointer;
+
+		> h3, img {
+			display: inline;
+			font-size: 4.8rem;
+			line-height: 1em;
+		}
+
+		> h3 {
+			margin: 0;
+			letter-spacing: -2px;
+		}
+
+		> img {
+			height: 0.8em;
+		}
+	}
+
+	.content {
+		display: none;
+
+		> img {
+			width: 100%;
+		}
 	}
 }

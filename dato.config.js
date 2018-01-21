@@ -33,7 +33,8 @@ module.exports = (dato, root, i18n) => {
 						client: project.client.name,
 						url: project.url,
 						description: project.description,
-						screenshot: project.screenshot.url({ w: 800, h: 450, fm: 'pjpg',  fit: 'crop', crop: 'top' })
+						screenshot: project.screenshot.url({ w: 800, h: 450, fm: 'pjpg',  fit: 'crop', crop: 'top' }),
+						thumbnail: project.screenshot.url({ w: 300, h: 300, fm: 'pjpg',  fit: 'crop', crop: 'top' })
 					}
 				}
 			);
@@ -45,10 +46,11 @@ module.exports = (dato, root, i18n) => {
 		dato.sideProjects.forEach((project) => {
 			console.log(project.title);
 
-			var imageUrl;
+			var imageUrl, imageThumbUrl;
 
 			if(project.screenshot != null) {
-				imageUrl = project.screenshot.url({ w: 800, h: 450, fm: 'pjpg',  fit: 'crop', crop: 'top' })
+				imageUrl = project.screenshot.url({ w: 800, h: 450, fm: 'pjpg',  fit: 'crop', crop: 'top' });
+				imageThumbUrl = project.screenshot.url({ w: 300, h: 300, fm: 'pjpg',  fit: 'crop', crop: 'top' });
 			}
 
 			sideProjectsDir.createPost(
@@ -56,7 +58,9 @@ module.exports = (dato, root, i18n) => {
 					frontmatter: {
 						title: project.title,
 						description: project.description,
-						screenshot: imageUrl
+						screenshot: imageUrl,
+						thumbnail: imageThumbUrl
+
 					}
 				}
 			);
