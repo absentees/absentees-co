@@ -34,7 +34,7 @@ module.exports = (dato, root, i18n) => {
 						url: project.url,
 						description: project.description,
 						screenshot: project.screenshot.url({ w: 800, h: 450, fm: 'pjpg',  fit: 'crop', crop: 'top' }),
-						thumbnail: project.screenshot.url({ w: 300, h: 300, fm: 'pjpg',  fit: 'crop', crop: 'top' })
+						thumbnail: project.screenshot.url({ w: 50, h: 50, fm: 'pjpg',  fit: 'crop', crop: 'top' })
 					}
 				}
 			);
@@ -50,7 +50,7 @@ module.exports = (dato, root, i18n) => {
 
 			if(project.screenshot != null) {
 				imageUrl = project.screenshot.url({ w: 800, h: 450, fm: 'pjpg',  fit: 'crop', crop: 'top' });
-				imageThumbUrl = project.screenshot.url({ w: 300, h: 300, fm: 'pjpg',  fit: 'crop', crop: 'top' });
+				imageThumbUrl = project.screenshot.url({ w: 50, h: 50, fm: 'pjpg',  fit: 'crop', crop: 'top' });
 			}
 
 			sideProjectsDir.createPost(

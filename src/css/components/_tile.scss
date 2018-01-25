@@ -4,6 +4,8 @@
 	opacity: 0.3;
 	margin: 0.5em 0;
 
+	border-bottom: 1px black solid;
+
 	&:hover {
 		opacity: 1;
 	}
@@ -23,11 +25,12 @@
 
 		> h3, img {
 			display: inline;
-			font-size: 4.8rem;
+			font-size: 6.4rem;
 			line-height: 1em;
 		}
 
 		> h3 {
+			font-weight: 700;
 			margin: 0;
 			letter-spacing: -2px;
 		}
