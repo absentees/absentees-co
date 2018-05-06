@@ -6,8 +6,10 @@
         {% endif %} 
     </div>
     <div class="content">
-        {% if project.screenshot %}
-            <img src="{{project.screenshot}}" alt="{{project.title}} screenshot">
+        {% if project.screenshots %}
+            {% for screenshot in project.screenshots %}
+                <img src="{{screenshot}}" alt="{{project.title}} screenshot">
+            {% endfor%}            
         {% endif %}
         {{ project.description | safe }}
     </div>
