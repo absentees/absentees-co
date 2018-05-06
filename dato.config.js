@@ -33,8 +33,11 @@ module.exports = (dato, root, i18n) => {
 						client: project.client.name,
 						url: project.url,
 						description: project.description,
-						screenshot: project.screenshot.url({ w: 800, h: 450, fm: 'pjpg',  fit: 'crop', crop: 'top' }),
-						thumbnail: project.screenshot.url({ w: 50, h: 50, fm: 'pjpg',  fit: 'crop', crop: 'top' })
+						screenshots: project.screenshots.map(function(screenshot){
+							return screenshot.url({ w: 800, h: 600, fm: 'pjpg',  fit: 'fill', crop: 'top', bg: "fff" })
+						}),
+						// screenshot: project.screenshot.url({ w: 800, h: 450, fm: 'pjpg',  fit: 'crop', crop: 'top' }),
+						thumbnail: project.screenshots[0].url({ w: 50, h: 50, fm: 'pjpg',  fit: 'crop', crop: 'top' })
 					}
 				}
 			);
@@ -46,11 +49,13 @@ module.exports = (dato, root, i18n) => {
 		dato.sideProjects.forEach((project) => {
 			console.log(project.title);
 
-			var imageUrl, imageThumbUrl;
+			var imageUrls, imageThumbUrl;
 
-			if(project.screenshot != null) {
-				imageUrl = project.screenshot.url({ w: 800, h: 450, fm: 'pjpg',  fit: 'crop', crop: 'top' });
-				imageThumbUrl = project.screenshot.url({ w: 50, h: 50, fm: 'pjpg',  fit: 'crop', crop: 'top' });
+			if(project.screenshots != null && project.screenshots.length > 0) {
+				imageUrls = project.screenshots.map(function(screenshot){
+					return screenshot.url({ w: 800, h: 600, fm: 'pjpg',  fit: 'fill', crop: 'top', bg: "fff" })
+				});
+				imageThumbUrl = project.screenshots[0].url({ w: 50, h: 50, fm: 'pjpg',  fit: 'crop', crop: 'top' });
 			}
 
 			sideProjectsDir.createPost(
@@ -58,7 +63,7 @@ module.exports = (dato, root, i18n) => {
 					frontmatter: {
 						title: project.title,
 						description: project.description,
-						screenshot: imageUrl,
+						screenshots: imageUrls,
 						thumbnail: imageThumbUrl
 
 					}
