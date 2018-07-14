@@ -120,23 +120,6 @@ gulp.task('javascript', ['jshint'], function () {
 		.on('error', function (e) {
 			$.notify().write(e);
 		});
-
-	if (envProd) {
-		return out.pipe($.uglify())
-			// .pipe($.rev())
-			.pipe(gulp.dest(dist + 'js'))
-			.pipe($.rev.manifest(dist + 'manifest.json', {
-				merge: true,
-				base: '',
-			}))
-			.pipe(gulp.dest(''));
-	} else {
-		return out.pipe($.sourcemaps.init({
-				loadMaps: true
-			}))
-			.pipe($.sourcemaps.write())
-			.pipe(gulp.dest(dist + 'js'));
-	}
 });
 
 // Dato Metalsmith
