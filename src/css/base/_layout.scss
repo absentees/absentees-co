@@ -1,17 +1,16 @@
-$neat-grid: (
-  columns: 12,
-  gutter: 1rem,
+$neat-grid: ( columns: 12,
+gutter: 1rem,
 );
 
-$mobile: (
-  columns: 12,
-  gutter: 1rem,
-  media: 767px,
+$mobile: ( columns: 12,
+gutter: 1rem,
+media: 767px,
 );
 
 body,
 html {
-  @include reset-box-model;
+	@include reset-box-model;
+	background-color: #dabfbc;
 }
 
 .container {
@@ -21,4 +20,6 @@ html {
 	padding: 0 1rem;
 
 	position: relative;
+
+
 }

@@ -12,12 +12,12 @@ import vsource from "vinyl-source-stream";
 import vbuffer from "vinyl-buffer";
 import runSequence from 'run-sequence';
 import webpack from 'webpack-stream';
-var browserSync 			= require('browser-sync').create();
-var Metalsmith 				= require('metalsmith');
-var collections 			= require('metalsmith-collections');
-var layouts     			= require('metalsmith-layouts');
-var metadata				= require('metalsmith-metadata-directory');
-var metalsmithMarkdown    	= require('metalsmith-markdown');
+var browserSync = require('browser-sync').create();
+var Metalsmith = require('metalsmith');
+var collections = require('metalsmith-collections');
+var layouts = require('metalsmith-layouts');
+var metadata = require('metalsmith-metadata-directory');
+var metalsmithMarkdown = require('metalsmith-markdown');
 
 const imageminPngquant = require('imagemin-pngquant');
 
@@ -36,7 +36,6 @@ var nunjucksEnv = nunjucks.configure('./src/html/views', {
 	throwOnUndefined: false,
 	noCache: true
 });
-
 
 // Handlebar helpers for revisioned asset paths and content
 const handlebarOpts = {
@@ -85,14 +84,11 @@ gulp.task('cacheclear', () => {
 });
 
 // Copy staticSrc
-gulp.task('copy'
-	, () => {
-		return gulp.src(staticSrc, {
-			base: 'src'
-		}).pipe(gulp.dest(dist));
-	});
-
-
+gulp.task('copy', () => {
+	return gulp.src(staticSrc, {
+		base: 'src'
+	}).pipe(gulp.dest(dist));
+});
 
 gulp.task("revreplace", function () {
 	var manifest = gulp.src(dist + 'manifest.json');
@@ -143,7 +139,6 @@ gulp.task('javascript', ['jshint'], function () {
 	}
 });
 
-
 // Dato Metalsmith
 gulp.task('metalsmith', function (cb) {
 	Metalsmith(__dirname)
@@ -152,7 +147,7 @@ gulp.task('metalsmith', function (cb) {
 		.clean(false)
 		.use(metadata({
 			directory: 'src/data/**/*.yml'
-		  }))
+		}))
 		.use(collections({
 			projects: 'projects/*.md',
 			sideProjects: 'sideProjects/*.md'
@@ -171,8 +166,6 @@ gulp.task('metalsmith', function (cb) {
 			cb();
 		});
 });
-
-
 
 // Images
 gulp.task("images", function (cb) {
@@ -195,19 +188,13 @@ gulp.task("images", function (cb) {
 
 // Stylesheets
 gulp.task('stylesheets', ['javascript'], (done) => {
-	var paths = [
-	];
+	var paths = [];
 	var out = gulp.src('src/css/main.scss')
 		.pipe($.sourcemaps.init())
 		.pipe($.sassGlob())
 		.pipe($.sass({
 			style: 'expanded',
-			includePaths: paths .concat(require('node-neat').includePaths)
-
-
-			.concat(require('node-normalize-scss').includePaths)
-
-
+			includePaths: paths.concat(require('node-normalize-scss').includePaths)
 		}))
 		.on('error', $.sass.logError)
 		.on('error', function (e) {
@@ -280,7 +267,6 @@ gulp.task("build", function (callback) {
 		"revreplace",
 		callback)
 });
-
 
 // Publish to whatever here
 gulp.task('publish', function () {

@@ -5,9 +5,10 @@
 	"author": "Present Company",
 	"scripts": {
 		"dump": "./node_modules/.bin/dato dump",
-		"dev": "./node_modules/.bin/dato dump && gulp serve"
+		"dev": "NODE_ENV=development ./node_modules/.bin/dato dump && gulp serve"
 	},
 	"dependencies": {
+		"babel": "^6.23.0",
 		"babel-preset-es2015": "^6.24.0",
 		"babelify": "^7.2.0",
 		"browser-sync": "^2.18.8",
