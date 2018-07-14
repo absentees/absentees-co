@@ -24,8 +24,6 @@ module.exports = (dato, root, i18n) => {
 	// // Projects
 	root.directory("src/html/pages/projects", (projectsDir) => {
 		dato.projects.forEach((project) => {
-			console.log(project);
-
 			projectsDir.createPost(
 				`${project.title}.md`, "yaml", {
 					frontmatter: {
@@ -33,11 +31,11 @@ module.exports = (dato, root, i18n) => {
 						client: project.client.name,
 						url: project.url,
 						description: project.description,
-						screenshots: project.screenshots.map(function(screenshot){
-							return screenshot.url({ w: 800, h: 600, fm: 'pjpg',  fit: 'fill', crop: 'top', bg: "fff" })
+						screenshots: project.screenshots.map(function (screenshot) {
+							return screenshot.url({ w: 800, h: 600, fm: 'pjpg', fit: 'fill', crop: 'top', bg: "fff" })
 						}),
 						// screenshot: project.screenshot.url({ w: 800, h: 450, fm: 'pjpg',  fit: 'crop', crop: 'top' }),
-						thumbnail: project.screenshots[0].url({ w: 50, h: 50, fm: 'pjpg',  fit: 'crop', crop: 'top' })
+						thumbnail: project.screenshots[0].url({ w: 50, h: 50, fm: 'pjpg', fit: 'crop', crop: 'top' })
 					}
 				}
 			);
@@ -47,15 +45,15 @@ module.exports = (dato, root, i18n) => {
 	//Side Projects
 	root.directory("src/html/pages/sideProjects", (sideProjectsDir) => {
 		dato.sideProjects.forEach((project) => {
-			console.log(project.title);
-
 			var imageUrls, imageThumbUrl;
 
-			if(project.screenshots != null && project.screenshots.length > 0) {
-				imageUrls = project.screenshots.map(function(screenshot){
-					return screenshot.url({ w: 800, h: 600, fm: 'pjpg',  fit: 'fill', crop: 'top', bg: "fff" })
-				});
-				imageThumbUrl = project.screenshots[0].url({ w: 50, h: 50, fm: 'pjpg',  fit: 'crop', crop: 'top' });
+			if (project.screenshots != null && project.screenshots.length > 0) {
+				if (project.screenshots[0] != null) {
+					imageUrls = project.screenshots.map(function (screenshot) {
+						return screenshot.url({ w: 800, h: 600, fm: 'pjpg', fit: 'fill', crop: 'top', bg: "fff" })
+					});
+					imageThumbUrl = project.screenshots[0].url({ w: 50, h: 50, fm: 'pjpg', fit: 'crop', crop: 'top' });
+				}
 			}
 
 			sideProjectsDir.createPost(
