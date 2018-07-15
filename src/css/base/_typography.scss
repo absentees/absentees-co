@@ -1,15 +1,6 @@
 // Typography
 @import url('https://fonts.googleapis.com/css?family=Overpass:400,700,800');
 
-
-// EXAMPLE FONT MIXIN
-// @mixin f-futura-pt-reg {
-// 	font : {
-// 		family: 'futura-pt', sans-serif;
-// 		weight: 900;
-// 		style: normal;
-// 	}
-// }
 // Setting default font size for rem
 html {
 	font-size: 62.5%;
@@ -34,13 +25,13 @@ a {
 h1 {
 	font-weight: 800;
 	line-height: 1em;
-	font-size: 50px;
+	font-size: 5rem;
 	letter-spacing: -0.05em;
 }
 
 p {
 	font-weight: normal;
-	line-height: 33px;
-	font-size: 18px;
+	line-height: 1.8em;
+	font-size: 1.8rem;
 	letter-spacing: -0.03em;
 }

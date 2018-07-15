@@ -1,25 +1,19 @@
-$neat-grid: ( columns: 12,
-gutter: 1rem,
-);
-
-$mobile: ( columns: 12,
-gutter: 1rem,
-media: 767px,
-);
-
 body,
 html {
 	@include reset-box-model;
 	background-color: #dabfbc;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 .container {
+	box-sizing: border-box;
 	width: 100%;
 	max-width: $max-width;
 	margin: 0 auto;
-	padding: 0 1rem;
+	padding: 1rem 2rem;
 
 	position: relative;
 
-
+	transform: rotate(-0.5deg);
 }
