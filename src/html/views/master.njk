@@ -3,22 +3,20 @@
 <!--[if IE 7]>         <html class="lt-ie9 lt-ie8" lang="en"> <![endif]-->
 <!--[if IE 8]>         <html class="lt-ie9" lang="en"> <![endif]-->
 <!--[if IE 9]> 		   <html class="ie9" lang="en"> <![endif]-->
-<!--[if gt IE 9]><!--> <html lang="en"> <!--<![endif]-->
-	<head>
-		{% include "partials/meta.njk" %}
-		<link rel="stylesheet" href="css/main.css">
-		
-	</head>
-	<body>
-		<div class="container">
-			{% include "partials/header.njk" %}
+<!--[if gt IE 9]><!-->
+<html lang="en">
+<!--<![endif]-->
 
-			{% block content %}
-			{% endblock %}
+<head>
+	{% include "partials/meta.njk" %}
+	<link rel="stylesheet" href="/css/main.css">
 
-			{% include "partials/footer.njk" %}			
-			{% include "partials/analytics.njk" %}
-		</div>
-		{# <script type="text/javascript" src="js/scripts.min.js"></script> #}
-	</body>
+</head>
+
+<body>
+	<div class="container">
+		{% include "partials/header.njk" %} {% block content %} {% endblock %} {% include "partials/footer.njk" %} {% include "partials/analytics.njk" %}
+	</div>
+</body>
+
 </html>

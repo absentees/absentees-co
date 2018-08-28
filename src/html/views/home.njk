@@ -1,18 +1,1 @@
-{% extends "master.njk" %}
-
-{% block content %}
-
-{# <section>
-    <h2>Selected Client Projects</h2>
-
-    {% for project in projects %}
-        {% include "partials/tile.njk" %}
-    {% endfor %}
-</section>
-<section>
-    <h2>Side Projects</h2>
-    {% for project in sideProjects %}
-        {% include "partials/tile.njk" %}
-    {% endfor %}
-</section> #}
-{% endblock %}
+{% extends "master.njk" %} {% block content %} {{ settings.description | safe }} {{ settings.links | safe }} {% endblock %}

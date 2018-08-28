@@ -1,0 +1,24 @@
+{% extends "master.njk" %} {% block content %}
+<section>
+	<h2>Selected Client Projects</h2>
+
+	{% for project in projects %} {% include "partials/tile.njk" %} {% endfor %}
+</section>
+<section>
+	<h2>Side Projects</h2>
+	{% for project in sideProjects %} {% include "partials/tile.njk" %} {% endfor %}
+</section>
+<script type="text/javascript">
+	document.addEventListener('DOMContentLoaded', function () {
+		document.querySelectorAll('.tile').forEach(function (el) {
+			el.addEventListener('click', function (tile) {
+				if (this.classList.contains('expand')) {
+					this.classList.remove('expand');
+				} else {
+					this.classList.add('expand');
+				}
+
+			})
+		});
+	}, false);
+</script>{% endblock %}

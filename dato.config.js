@@ -32,10 +32,23 @@ module.exports = (dato, root, i18n) => {
 						url: project.url,
 						description: project.description,
 						screenshots: project.screenshots.map(function (screenshot) {
-							return screenshot.url({ w: 800, h: 600, fm: 'pjpg', fit: 'fill', crop: 'top', bg: "fff" })
+							return screenshot.url({
+								w: 800,
+								h: 600,
+								fm: 'pjpg',
+								fit: 'fill',
+								crop: 'top',
+								bg: "10181c"
+							})
 						}),
 						// screenshot: project.screenshot.url({ w: 800, h: 450, fm: 'pjpg',  fit: 'crop', crop: 'top' }),
-						thumbnail: project.screenshots[0].url({ w: 50, h: 50, fm: 'pjpg', fit: 'crop', crop: 'top' })
+						thumbnail: project.screenshots[0].url({
+							w: 50,
+							h: 50,
+							fm: 'pjpg',
+							fit: 'crop',
+							crop: 'top'
+						})
 					}
 				}
 			);
@@ -50,9 +63,22 @@ module.exports = (dato, root, i18n) => {
 			if (project.screenshots != null && project.screenshots.length > 0) {
 				if (project.screenshots[0] != null) {
 					imageUrls = project.screenshots.map(function (screenshot) {
-						return screenshot.url({ w: 800, h: 600, fm: 'pjpg', fit: 'fill', crop: 'top', bg: "fff" })
+						return screenshot.url({
+							w: 800,
+							h: 600,
+							fm: 'pjpg',
+							fit: 'fill',
+							crop: 'top',
+							bg: "10181c"
+						})
 					});
-					imageThumbUrl = project.screenshots[0].url({ w: 50, h: 50, fm: 'pjpg', fit: 'crop', crop: 'top' });
+					imageThumbUrl = project.screenshots[0].url({
+						w: 50,
+						h: 50,
+						fm: 'pjpg',
+						fit: 'crop',
+						crop: 'top'
+					});
 				}
 			}
 
