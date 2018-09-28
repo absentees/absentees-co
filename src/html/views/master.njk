@@ -8,14 +8,19 @@
 <!--<![endif]-->
 
 <head>
+	{% include "partials/analytics.njk" %}
 	{% include "partials/meta.njk" %}
 	<link rel="stylesheet" href="/css/main.css">
 
 </head>
 
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MFK7JBC"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 	<div class="container">
-		{% include "partials/header.njk" %} {% block content %} {% endblock %} {% include "partials/footer.njk" %} {% include "partials/analytics.njk" %}
+		{% include "partials/header.njk" %} {% block content %} {% endblock %} {% include "partials/footer.njk" %} 
 	</div>
 </body>
 
