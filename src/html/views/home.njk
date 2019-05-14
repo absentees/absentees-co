@@ -1,1 +1,24 @@
-{% extends "master.njk" %} {% block content %} {{ settings.description | safe }} {{ settings.links | safe }} {% endblock %}
+{% extends "master.njk" %}
+{% block content %}
+{{ settings.description | safe }}
+{{ settings.links | safe }}
+
+{% for project in projects %}
+<div class="project">
+    <div class="name">
+        <h3>{{ project.title }}</h3>
+    </div>
+    <div class="description">{{ project.description | safe }}
+    </div>
+    <div class="mobile">{% if project.thumbnail %}
+        <img src="{{project.thumbnail}}" alt="{{project.title}} thumbnail">
+        {% endif %}</div>
+    <div class="desktop">{% if project.screenshots %}
+        {% for screenshot in project.screenshots %}
+        <img src="{{screenshot}}" alt="{{project.title}} screenshot">
+        {% endfor%}
+        {% endif %}</div>
+</div>
+{% endfor %}
+
+{% endblock %}

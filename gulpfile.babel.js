@@ -226,7 +226,7 @@ gulp.task('serve', ['clean', 'stylesheets', 'javascript', 'images', 'copy', 'met
 	gulp.watch('src/css/**/*.scss', ['stylesheets']);
 	gulp.watch('src/js/**/*.js', ['javascript']);
 	gulp.watch("src/**/*.{html,njk}", ["metalsmith"]);
-	gulp.watch(dist + '/**/*.{jpg,png,svg,webp,js,html}').on('change', browserSync.reload);
+	gulp.watch(dist + '/**/*.{jpg,png,svg,webp,js,html,css}').on('change', browserSync.reload);
 });
 
 // Deploy

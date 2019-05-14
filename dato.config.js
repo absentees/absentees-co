@@ -58,7 +58,6 @@ module.exports = (dato, root, i18n) => {
               bg: "10181c"
             });
           }),
-          // screenshot: project.screenshot.url({ w: 800, h: 450, fm: 'pjpg',  fit: 'crop', crop: 'top' }),
           thumbnail: project.screenshots[0].url({
             w: 50,
             h: 50,
