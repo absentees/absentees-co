@@ -16,6 +16,10 @@ html {
 	position: relative;
 }
 
+.grid-container {
+	border: 1px solid black;
+}
+
 .project {
 	display: grid;
 	grid-template-columns: 0.4fr 1.6fr 1fr 1fr;
