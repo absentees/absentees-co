@@ -15,9 +15,6 @@
             </div>
             <div class="description">{{ project.description | safe }}
             </div>
-            <div class="mobile">{% if project.thumbnail %}
-                <img src="{{project.thumbnail}}" alt="{{project.title}} thumbnail">
-                {% endif %}</div>
             <div class="desktop">{% if project.screenshots %}
                 {% for screenshot in project.screenshots %}
                 <img src="{{screenshot}}" alt="{{project.title}} screenshot">

@@ -18,24 +18,48 @@ html {
 
 .grid-container {
 	border: 1px solid black;
+
+	> .header {
+		padding: 1em;
+	}
 }
 
 .project {
 	display: grid;
-	grid-template-columns: 0.4fr 1.6fr 1fr 1fr;
-	grid-template-rows: 1fr;
-	grid-template-areas: "name description mobile desktop";
+	grid-template-columns: 0.5fr 1.5fr;
+	grid-template-rows: auto;
+	grid-template-areas: 	"name description" 
+							"desktop desktop";
 	grid-area: project;
+
+	> div {
+		padding: 1em;
+	}
+
+
+	@media all and (max-width: 450px) {
+		grid-template-columns: 1fr;
+		grid-template-rows: auto;
+		grid-template-areas: 	"name"
+								"description"
+								"desktop";
+
+	}
 }
 
-.name,
+.name {
+	border-top: 1px solid black;
+}
+
 .description,
 .mobile,
-.desktop {
-	padding: 1em;
-	
+.desktop {	
 	border-left: 1px solid black;
 	border-top: 1px solid black;
+
+	@media all and (max-width: 450px) {
+		border-left: none;
+	}
 }
 
 .name {
@@ -60,5 +84,4 @@ html {
 
 .desktop {
 	grid-area: desktop;
-	border-right: 1px solid black;
 }
