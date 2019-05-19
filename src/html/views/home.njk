@@ -3,32 +3,34 @@
 
 
 <div class="grid-container">
-    <div class="header">
-        {{ settings.description | safe }}
-        {{ settings.links | safe }}
-    </div>
-    <div class="projects">
-        {% for project in projects %}
-        <div class="project">
-            <div class="name">
-                <h3>{{ project.title }}</h3>
-            </div>
-            <div class="description">{{ project.description | safe }}
-            </div>
-            <div class="desktop">{% if project.screenshots %}
-                {% for screenshot in project.screenshots %}
-                <img src="{{screenshot}}" alt="{{project.title}} screenshot">
-                {% endfor%}
-                {% endif %}</div>
-        </div>
-        {% endfor %}
-    </div>
-    <div class="footer">
-    
-    </div>
+	<div class="header">
+		{{ settings.description | safe }}
+		{{ settings.links | safe }}
+	</div>
+	<div class="projects">
+		{% for project in projects %}
+		<div class="project">
+			<div class="name">
+				<h3>{{ project.title }}</h3>
+			</div>
+			<div class="description">{{ project.description | safe }}
+			</div>
+			<div class="screenshots">{% if project.screenshots %}
+				{% for screenshot in project.screenshots %}
+				<div class="screenshot">
+                    <img src="{{screenshot}}" alt="{{project.title}} screenshot">
+                    <span>This is a screenshot of what this image is about to explain it to the viewer.</span>
+                </div>
+				{% endfor%}
+				{% endif %}</div>
+		</div>
+		{% endfor %}
+	</div>
+	<div class="footer">
+
+	</div>
 
 </div>
-
 
 
 {% endblock %}

@@ -29,7 +29,7 @@ html {
 	grid-template-columns: 0.5fr 1.5fr;
 	grid-template-rows: auto;
 	grid-template-areas: 	"name description" 
-							"desktop desktop";
+							"screenshots screenshots";
 	grid-area: project;
 
 	> div {
@@ -42,7 +42,7 @@ html {
 		grid-template-rows: auto;
 		grid-template-areas: 	"name"
 								"description"
-								"desktop";
+								"screenshots";
 
 	}
 }
@@ -53,8 +53,7 @@ html {
 
 .description,
 .mobile,
-.desktop {	
-	border-left: 1px solid black;
+.screenshots {	
 	border-top: 1px solid black;
 
 	@media all and (max-width: 450px) {
@@ -71,17 +70,29 @@ html {
 	grid-area: description;
 }
 
-.mobile,
-.desktop {
-	img {
-		width: 100%;
-	}
-}
-
 .mobile {
 	grid-area: mobile;
 }
 
-.desktop {
-	grid-area: desktop;
+.screenshots {
+	grid-area: screenshots;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+
+	> .screenshot {
+		flex-basis: 25%;
+		font-size: 1.4rem;
+
+		img {
+			width: 100%;
+			margin-bottom: 0.5em;
+		}
+
+		span {
+			display: block;
+			margin-bottom: 2em;
+		}
+
+	}
 }
