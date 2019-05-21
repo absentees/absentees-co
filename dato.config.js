@@ -47,6 +47,7 @@ module.exports = (dato, root, i18n) => {
 			try {
 				projectsDir.createPost(`${project.title}.md`, "yaml", {
 					frontmatter: {
+            id: project.id,
 						title: project.title,
 						published: project.published,
 						client: project.client.name,
@@ -61,13 +62,6 @@ module.exports = (dato, root, i18n) => {
 								crop: "top",
 								bg: "10181c"
 							});
-						}),
-						thumbnail: project.screenshots[0].url({
-							w: 50,
-							h: 50,
-							fm: "pjpg",
-							fit: "crop",
-							crop: "top"
 						})
 					}
 				});
@@ -106,6 +100,7 @@ module.exports = (dato, root, i18n) => {
 
 			sideProjectsDir.createPost(`${project.title}.md`, "yaml", {
 				frontmatter: {
+          id: project.id,
 					title: project.title,
 					published: project.published,
 					description: project.description,

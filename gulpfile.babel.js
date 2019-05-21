@@ -119,7 +119,8 @@ gulp.task('javascript', ['jshint'], function () {
 		.pipe(webpack(require('./webpack.config.js')))
 		.on('error', function (e) {
 			$.notify().write(e);
-		});
+		})
+		.pipe(gulp.dest(dist + 'js'));
 });
 
 // Dato Metalsmith

@@ -1,3 +1,5 @@
+$mobile-width: 550px;
+
 body,
 html {
 	@include reset-box-model;
@@ -26,10 +28,10 @@ html {
 
 .project {
 	display: grid;
-	grid-template-columns: 0.5fr 1.5fr;
+	grid-template-columns: 0.5fr 1.5fr 0.25fr;
 	grid-template-rows: auto;
-	grid-template-areas: 	"name description" 
-							"screenshots screenshots";
+	grid-template-areas: 	"name description plus" 
+							"screenshots screenshots screenshots";
 	grid-area: project;
 
 	> div {
@@ -37,12 +39,12 @@ html {
 	}
 
 
-	@media all and (max-width: 450px) {
-		grid-template-columns: 1fr;
+	@media all and (max-width: $mobile-width) {
+		grid-template-columns: 1fr 0.25fr;
 		grid-template-rows: auto;
-		grid-template-areas: 	"name"
-								"description"
-								"screenshots";
+		grid-template-areas: 	"name plus"
+								"description description"
+								"screenshots screenshots";
 
 	}
 }
@@ -53,10 +55,11 @@ html {
 
 .description,
 .mobile,
-.screenshots {	
+.screenshots,
+.expand-container {	
 	border-top: 1px solid black;
 
-	@media all and (max-width: 450px) {
+	@media all and (max-width: $mobile-width) {
 		border-left: none;
 	}
 }
@@ -64,6 +67,12 @@ html {
 .name {
 	grid-area: name;
 	word-break: break-word;
+}
+
+.expand-container {
+	button {
+		margin: 1em 0;
+	}
 }
 
 .description {
@@ -76,12 +85,16 @@ html {
 
 .screenshots {
 	grid-area: screenshots;
-	display: flex;
+	display: none;
 	flex-direction: row;
 	flex-wrap: wrap;
+	
+	&.show {
+		display: flex;
+	}
 
 	> .screenshot {
-		flex-basis: 25%;
+		flex-basis: 50%;
 		font-size: 1.4rem;
 
 		img {
