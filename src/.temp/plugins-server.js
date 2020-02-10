@@ -1,4 +1,4 @@
-import plugin_gridsome_plugin_google_analytics_6 from "/Users/scott/Development/absentees-co/node_modules/@gridsome/plugin-google-analytics/gridsome.client.js"
+import plugin_gridsome_plugin_google_analytics_6 from "/Users/scottb/Development/absentees-co/node_modules/@gridsome/plugin-google-analytics/gridsome.client.js"
 
 export default [
   {

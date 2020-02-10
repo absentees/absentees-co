@@ -8,24 +8,36 @@
                 <div
                     v-for="edge in $page.projects.edges"
                     :key="edge.node.id"
-                    class="project">
+                    class="project"
+                    :id="edge.node.id"
+                >
                     <div class="name">
                         <h3>{{ edge.node.title }}</h3>
                     </div>
                     <div class="expand-container">
-                        <button>Expand</button>
-                        <div
-                            v-html="edge.node.description"
-                            class="description"
-                        ></div>
+                        <button @click="expandProject(edge.node.id, $event)">
+                            Expand
+                        </button>
                     </div>
-					<div class="screenshots">
-						<div class="screenshot" v-if="edge.node.screenshots">
-							<div class="screenshot" :key="screenshot.id" v-for="screenshot in edge.node.screenshots">
-								<g-image :width="screenshot.width.toString()" :height="screenshot.height.toString()" :src="screenshot.url"></g-image>
-							</div>
-						</div>
-					</div>
+                    <div
+                        v-html="edge.node.description"
+                        class="description"
+                    ></div>
+                    <div class="screenshots">
+                        <div class="screenshot" v-if="edge.node.screenshots">
+                            <div
+                                class="screenshot"
+                                :key="screenshot.id"
+                                v-for="screenshot in edge.node.screenshots"
+                            >
+                                <img
+                                    :src="screenshot.url"
+                                    :width="screenshot.width"
+                                    :height="screenshot.height"
+                                />>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -44,13 +56,13 @@ query {
   projects: allDatoCmsProject {
     edges {
       node {
+        id,
         title,
         description,
 		screenshots {
 			url,
 			width,
 			height
-
 		}
       }
     }
@@ -61,7 +73,21 @@ query {
 <script>
 export default {
     metaInfo: {
-        title: "Hello, world!"
+        title: "Scott Blissett - Designer/Developer"
+    },
+    methods: {
+        expandProject: function(projectId, event) {
+            var screenshots = document
+                .getElementById(projectId)
+                .querySelector(".screenshots");
+            if (screenshots.style.display === "") {
+                screenshots.style.display = "flex";
+                event.target.innerHTML = "Collapse";
+            } else {
+                screenshots.style.display = "";
+                event.target.innerHTML = "Expand";
+            }
+        }
     }
 };
 </script>
@@ -146,7 +172,7 @@ $mobile-width: 550px;
 
 .screenshots {
     grid-area: screenshots;
-    // display: none; 
+    display: none;
     flex-direction: row;
     flex-wrap: wrap;
 
@@ -159,7 +185,6 @@ $mobile-width: 550px;
         font-size: 1.4rem;
 
         img {
-            width: 100%;
             margin-bottom: 0.5em;
         }
 

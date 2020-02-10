@@ -1,5 +1,5 @@
 {
-  "name": "absentees-co-",
+  "name": "absentees-co",
   "private": true,
   "scripts": {
     "build": "gridsome build",
