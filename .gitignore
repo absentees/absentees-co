@@ -12,3 +12,4 @@ src/html/pages/**/*
 .cache
 /src/.temp/**/*
 src/.temp/**/*
+src/.temp/
