@@ -2,33 +2,33 @@
     <Layout>
         <div class="grid-container">
             <div class="header">
-                <div v-html="$page.about.edges[0].node.bio"></div>
+                <div v-html="$page.datoCMS.about.bio"></div>
             </div>
             <div class="projects">
                 <div
-                    v-for="edge in $page.projects.edges"
-                    :key="edge.node.id"
+                    v-for="project in $page.datoCMS.allProjects"
+                    :key="project.id"
                     class="project"
-                    :id="edge.node.id"
+                    :id="project.id"
                 >
                     <div class="name">
-                        <h3>{{ edge.node.title }}</h3>
+                        <h3>{{ project.title }}</h3>
                     </div>
                     <div class="expand-container">
-                        <button @click="expandProject(edge.node.id, $event)">
+                        <button @click="expandProject(project.id, $event)">
                             Expand
                         </button>
                     </div>
                     <div
-                        v-html="edge.node.description"
+                        v-html="project.description"
                         class="description"
                     ></div>
                     <div class="screenshots">
-                        <div class="screenshot" v-if="edge.node.screenshots">
+                        <div class="screenshot" v-if="project.screenshots">
                             <div
                                 class="screenshot"
                                 :key="screenshot.id"
-                                v-for="screenshot in edge.node.screenshots"
+                                v-for="screenshot in project.screenshots"
                             >
                                 <img
                                     :src="screenshot.url"
@@ -46,25 +46,21 @@
 
 <page-query>
 query {
-	about: allDatoCmsAbout {
-		edges {
-			node {
-				bio
-			}
+  datoCMS {
+    allProjects {
+      id
+      title
+      description
+      screenshots {
+        url
+        width
+        height
+      }
     }
   },
-  projects: allDatoCmsProject {
-    edges {
-      node {
-        id,
-        title,
-        description,
-		screenshots {
-			url,
-			width,
-			height
-		}
-      }
+  datoCMS {
+    about {
+      bio
     }
   }
 }

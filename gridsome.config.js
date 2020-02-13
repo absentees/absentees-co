@@ -9,13 +9,23 @@ module.exports = {
   siteUrl: 'https://www.absentees.co',
   plugins: [
     {
-      use: '@gridsome/source-datocms',
+      use: '@gridsome/source-graphql',
       options: {
-        apiToken: process.env.DATO_API_TOKEN, // required
-        previewMode: false,
-        apiUrl: 'https://site-api.datocms.com'
-      }
+        url: 'https://graphql.datocms.com/',
+        fieldName: 'datoCMS',
+        headers: {
+          Authorization: `Authorization: ${process.env.DATO_API_TOKEN}`,
+        },
+      },
     },
+    // {
+    //   use: '@gridsome/source-datocms',
+    //   options: {
+    //     apiToken: process.env.DATO_API_TOKEN, // required
+    //     previewMode: false,
+    //     apiUrl: 'https://site-api.datocms.com'
+    //   }
+    // },
     {
       use: '@gridsome/plugin-google-analytics',
       options: {
