@@ -1,18 +1,18 @@
 <template>
     <Layout>
-        <div class="grid-container">
+        <main class="grid-container">
             <div class="header">
                 <div v-html="$page.datoCMS.about.bio"></div>
             </div>
             <div class="projects">
-                <div
+                <article
                     v-for="project in $page.datoCMS.allProjects"
                     :key="project.id"
                     class="project"
                     :id="project.id"
                 >
                     <div class="name">
-                        <h3>{{ project.title }}</h3>
+                        <h2>{{ project.title }}</h2>
                     </div>
                     <div class="expand-container">
                         <button @click="expandProject(project.id, $event)">
@@ -24,37 +24,42 @@
                         class="description"
                     ></div>
                     <div class="screenshots">
-                        <div class="screenshot" v-if="project.screenshots">
-                            <div
-                                class="screenshot"
-                                :key="screenshot.id"
-                                v-for="screenshot in project.screenshots"
-                            >
-                                <img
-                                    :src="screenshot.url"
-                                    :width="screenshot.width"
-                                    :height="screenshot.height"
-                                />>
+                        <div
+                            class="screenshot"
+                            :key="screenshot.id"
+                            v-for="screenshot in project.screenshots"
+                        >
+                            <div>
+                                <div v-bind:style="{'position': 'relative','backgroundImage': `url(${screenshot.responsiveImage.base64}` ,'backgroundColor' : 'red', 'backgroundSize': 'cover'}">
+                                    <div v-bind:style="{'paddingTop': '75%' }">
+                                        <picture style="position: absolute; left: 0; top: 0; width: 100%">
+                                            <source :srcset="screenshot.responsiveImage.webpSrcSet" type="image/webp">
+                                            <source :srcset="screenshot.responsiveImage.srcSet">
+                                            <img :src="screenshot.responsiveImage.src" :alt="screenshot.responsiveImage.alt" :title="screenshot.responsiveImage.title" loading="lazy">
+                                        </picture>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                </article>
             </div>
-        </div>
+        </main>
     </Layout>
 </template>
 
 <page-query>
 query {
   datoCMS {
-    allProjects {
+    allProjects(orderBy: [title_ASC]) {
       id
       title
       description
       screenshots {
-        url
-        width
-        height
+        id,
+        responsiveImage(imgixParams: {fm: jpg, fit: fill, w: 800, h: 600, crop: top, bg: "10181c" }) {
+          ...responsiveImageFragment
+        }
       }
     }
   },
@@ -63,6 +68,20 @@ query {
       bio
     }
   }
+}
+
+fragment responsiveImageFragment on datoCMS_ResponsiveImage {
+  srcSet
+  webpSrcSet
+  sizes
+  src
+  width
+  height
+  aspectRatio
+  alt
+  title
+  bgColor
+  base64
 }
 </page-query>
 
@@ -94,7 +113,6 @@ $mobile-width: 550px;
 .container {
     box-sizing: border-box;
     width: 100%;
-    max-width: 100%;
     margin: 0 auto;
     padding: 1rem 2rem;
 
@@ -168,19 +186,15 @@ $mobile-width: 550px;
 
 .screenshots {
     grid-area: screenshots;
-    display: none;
     flex-direction: row;
     flex-wrap: wrap;
-
-    &.show {
-        display: flex;
-    }
+    display: flex;
 
     > .screenshot {
         flex-basis: 50%;
-        font-size: 1.4rem;
-
+        
         img {
+            width: 100%;
             margin-bottom: 0.5em;
         }
 
