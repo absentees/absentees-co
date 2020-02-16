@@ -1,12 +1,8 @@
 <template>
     <Layout>
-        <div class="header">
-            <div v-html="$page.datoCMS.about.bio"></div>
-            <div v-html="$page.datoCMS.about.links"></div>
-        </div>
         <div class="projects">
             <article
-                v-for="project in $page.datoCMS.allProjects"
+                v-for="project in $page.datoCMS.allSideProjects"
                 :key="project.id"
                 class="project"
                 :id="project.id"
@@ -67,25 +63,15 @@
                 </div>
             </article>
         </div>
-    </Layout>
+    </Layout>  
 </template>
 
 <page-query>
 query {
   datoCMS {
-    allProjects(orderBy: [title_ASC]) {
-      id
-      title
-      description
-      screenshots {
-        id,
-        responsiveImage(imgixParams: {fm: jpg, fit: fill, w: 800, h: 600, crop: top, bg: "10181c" }) {
-          ...responsiveImageFragment
-        }
-      }
-    },
      allSideProjects {
       id
+      title
       description
       screenshots {
         id
@@ -93,12 +79,6 @@ query {
           ...responsiveImageFragment
         }
       }
-    }
-  },
-  datoCMS {
-    about {
-      bio
-      links
     }
   }
 }
@@ -121,76 +101,15 @@ fragment responsiveImageFragment on datoCMS_ResponsiveImage {
 <script>
 export default {
     metaInfo: {
-        title: "Scott Blissett - Designer/Developer"
-    },
-    methods: {}
+        title: 'Side Projects',
+        meta: [
+        ]
+    }
 };
 </script>
 
-<style lang="scss">
-$mobile-width: 550px;
-
-.container {
-    box-sizing: border-box;
-    width: 100%;
-    margin: 0 auto;
-    padding: 1rem 2rem;
-
-    position: relative;
-}
-
-.grid-container {
-    border: 1px solid black;
-
-    > .header {
-        padding: 1em;
-    }
-}
-
-.project {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
-    grid-template-areas:
-        "description"
-        "screenshots";
-    grid-area: project;
-
-    padding: 1em 2em;
-    border-top: 1px solid black;
-}
-
-.name {
-    grid-area: name;
-    word-break: break-word;
-}
-
-.description {
-    grid-area: description;
-}
-
-.mobile {
-    grid-area: mobile;
-}
-
-.screenshots {
-    grid-area: screenshots;
-    flex-direction: row;
-    flex-wrap: wrap;
-    display: flex;
-
-    > .screenshot {
-        flex-basis: 50%;
-
-        img {
-            width: 100%;
-            margin-bottom: 0.5em;
-        }
-
-        span {
-            display: block;
-            margin-bottom: 2em;
-        }
-    }
+<style lang="scss" scoped>
+.project:first-of-type {
+    border-top: none;
 }
 </style>
