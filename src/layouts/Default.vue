@@ -9,6 +9,7 @@
             <ul>
                 <li><g-link to="/">Home</g-link></li>
                 <li><g-link to="/side-projects/">Side Projects</g-link></li>
+                <li><g-link to="/hyperlinks/">Hyperlinks</g-link></li>
             </ul>
         </nav>
         <main class="grid-container">
