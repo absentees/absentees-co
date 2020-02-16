@@ -1,9 +1,19 @@
 <template>
     <div class="layout">
         <header class="header">
-            <h1 id="title" class="title">Scott Blissett - Designer/Developer</h1>
+            <h1 id="title" class="title">
+                Scott Blissett - Designer/Developer
+            </h1>
         </header>
-        <slot />
+        <nav>
+            <ul>
+                <li><g-link to="/">Home</g-link></li>
+                <li><g-link to="/side-projects/">Side Projects</g-link></li>
+            </ul>
+        </nav>
+        <main class="grid-container">
+            <slot />
+        </main>
         <a class="backToTop" href="#title">Back to top</a>
     </div>
 </template>
@@ -17,9 +27,9 @@ html {
 body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-	max-width: 80ch;
-	padding: 2ch;
-	margin: auto;
+    max-width: 80ch;
+    padding: 2ch;
+    margin: auto;
     color: #000;
 }
 
@@ -39,5 +49,14 @@ p {
 .backToTop {
     display: block;
     margin: 1em auto;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+
+    li {
+        margin: 0.5em 0;
+    }
 }
 </style>
