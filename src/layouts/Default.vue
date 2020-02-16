@@ -1,9 +1,10 @@
 <template>
     <div class="layout">
         <header class="header">
-            <h1 class="title">Scott Blissett - Designer/Developer</h1>
+            <h1 id="title" class="title">Scott Blissett - Designer/Developer</h1>
         </header>
         <slot />
+        <a class="backToTop" href="#title">Back to top</a>
     </div>
 </template>
 
@@ -33,5 +34,10 @@ h1 {
 
 p {
     line-height: 1.5em;
+}
+
+.backToTop {
+    display: block;
+    margin: 1em auto;
 }
 </style>

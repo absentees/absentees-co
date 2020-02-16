@@ -3,6 +3,8 @@
         <main class="grid-container">
             <div class="header">
                 <div v-html="$page.datoCMS.about.bio"></div>
+                <div v-html="$page.datoCMS.about.links"></div> 
+                
             </div>
             <div class="projects">
                 <article
@@ -11,18 +13,10 @@
                     class="project"
                     :id="project.id"
                 >
-                    <div class="name">
+                    <div class="description">
                         <h2>{{ project.title }}</h2>
+                        <span v-html="project.description"></span>
                     </div>
-                    <div class="expand-container">
-                        <button @click="expandProject(project.id, $event)">
-                            Expand
-                        </button>
-                    </div>
-                    <div
-                        v-html="project.description"
-                        class="description"
-                    ></div>
                     <div class="screenshots">
                         <div
                             class="screenshot"
@@ -66,6 +60,7 @@ query {
   datoCMS {
     about {
       bio
+      links
     }
   }
 }
@@ -91,18 +86,6 @@ export default {
         title: "Scott Blissett - Designer/Developer"
     },
     methods: {
-        expandProject: function(projectId, event) {
-            var screenshots = document
-                .getElementById(projectId)
-                .querySelector(".screenshots");
-            if (screenshots.style.display === "") {
-                screenshots.style.display = "flex";
-                event.target.innerHTML = "Collapse";
-            } else {
-                screenshots.style.display = "";
-                event.target.innerHTML = "Expand";
-            }
-        }
     }
 };
 </script>
@@ -129,51 +112,20 @@ $mobile-width: 550px;
 
 .project {
     display: grid;
-    grid-template-columns: 0.5fr 1.5fr 0.25fr;
+    grid-template-columns: 1fr;
     grid-template-rows: auto;
     grid-template-areas:
-        "name description plus"
-        "screenshots screenshots screenshots";
+        "description"
+        "screenshots";
     grid-area: project;
 
-    > div {
-        padding: 1em;
-    }
-
-    @media all and (max-width: $mobile-width) {
-        grid-template-columns: 1fr 0.25fr;
-        grid-template-rows: auto;
-        grid-template-areas:
-            "name plus"
-            "description description"
-            "screenshots screenshots";
-    }
-}
-
-.name {
+    padding: 1em 2em;
     border-top: 1px solid black;
-}
-
-.description,
-.mobile,
-.screenshots,
-.expand-container {
-    border-top: 1px solid black;
-
-    @media all and (max-width: $mobile-width) {
-        border-left: none;
-    }
 }
 
 .name {
     grid-area: name;
     word-break: break-word;
-}
-
-.expand-container {
-    button {
-        margin: 1em 0;
-    }
 }
 
 .description {
