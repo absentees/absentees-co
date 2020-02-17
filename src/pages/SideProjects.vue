@@ -112,4 +112,8 @@ export default {
 .project:first-of-type {
     border-top: none;
 }
+
+.screenshot {
+    flex-basis: 50%;
+}
 </style>

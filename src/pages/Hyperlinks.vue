@@ -37,7 +37,7 @@ export default {
 
 <style lang="scss" scoped>
     .links {
-        padding: 1em 2em;
+        padding: 0 1em;
 
         li {
             margin: 1em 0;

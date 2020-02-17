@@ -73,7 +73,7 @@
 <page-query>
 query {
   datoCMS {
-    allProjects(orderBy: [title_ASC]) {
+    allProjects(filter: {published: {eq: true}}) {
       id
       title
       description
@@ -156,7 +156,7 @@ $mobile-width: 550px;
         "screenshots";
     grid-area: project;
 
-    padding: 1em 2em;
+    padding: 1em;
     border-top: 1px solid black;
 }
 
