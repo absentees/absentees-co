@@ -121,7 +121,7 @@ fragment responsiveImageFragment on datoCMS_ResponsiveImage {
 <script>
 export default {
     metaInfo: {
-        title: "Scott Blissett - Designer/Developer"
+        title: "Home"
     },
     methods: {}
 };
