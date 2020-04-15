@@ -79,7 +79,7 @@ query {
       description
       screenshots {
         id,
-        responsiveImage(imgixParams: {fm: jpg, fit: fill, w: 800, h: 600, crop: top, bg: "10181c" }) {
+        responsiveImage(imgixParams: {fm: jpg, fit: crop, w: 800, h: 600, crop: top, bg: "10181c" }) {
           ...responsiveImageFragment
         }
       }
@@ -89,7 +89,7 @@ query {
       description
       screenshots {
         id
-        responsiveImage(imgixParams: {fm: jpg, fit: fill, w: 800, h: 600, crop: top, bg: "10181c" }) {
+        responsiveImage(imgixParams: {fm: jpg, fit: crop, w: 800, h: 600, crop: top, bg: "10181c" }) {
           ...responsiveImageFragment
         }
       }
@@ -121,7 +121,8 @@ fragment responsiveImageFragment on datoCMS_ResponsiveImage {
 <script>
 export default {
     metaInfo: {
-        title: "Home"
+        title: "Scott Blissett - Designer/Developer",
+        titleTemplate: '%s',
     },
     methods: {}
 };
@@ -180,7 +181,7 @@ $mobile-width: 550px;
     display: flex;
 
     > .screenshot {
-        flex-basis: 50%;
+        flex-basis: 100%;
 
         img {
             width: 100%;
