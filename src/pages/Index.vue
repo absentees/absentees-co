@@ -79,7 +79,7 @@ query {
       description
       screenshots {
         id,
-        responsiveImage(imgixParams: {fm: jpg, fit: fill, w: 800, h: 600, crop: top, bg: "10181c" }) {
+        responsiveImage(imgixParams: {fm: jpg, fit: fill, w: 800, h: 600, crop: top, bg: "dbdbdb" }) {
           ...responsiveImageFragment
         }
       }
@@ -89,7 +89,7 @@ query {
       description
       screenshots {
         id
-        responsiveImage(imgixParams: {fm: jpg, fit: fill, w: 800, h: 600, crop: top, bg: "10181c" }) {
+        responsiveImage(imgixParams: {fm: jpg, fit: fill, w: 800, h: 800, crop: top, bg: "dbdbdb" }) {
           ...responsiveImageFragment
         }
       }
@@ -180,7 +180,7 @@ $mobile-width: 550px;
     display: flex;
 
     > .screenshot {
-        flex-basis: 50%;
+        flex-basis: 100%;
 
         img {
             width: 100%;

@@ -75,7 +75,7 @@ query {
       description
       screenshots {
         id
-        responsiveImage(imgixParams: {fm: jpg, fit: fill, w: 800, h: 600, crop: top, bg: "10181c" }) {
+        responsiveImage(imgixParams: {fm: jpg, fit: fill, w: 800, h: 600, crop: top, bg: "dbdbdb" }) {
           ...responsiveImageFragment
         }
       }
@@ -114,6 +114,6 @@ export default {
 }
 
 .screenshot {
-    flex-basis: 50%;
+    flex-basis: 100%;
 }
 </style>
