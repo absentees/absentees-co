@@ -121,10 +121,23 @@ fragment responsiveImageFragment on datoCMS_ResponsiveImage {
 <script>
 export default {
     metaInfo: {
+        script: [
+            { src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' }
+        ],
         title: "Scott Blissett - Designer/Developer",
         titleTemplate: '%s',
     },
-    methods: {}
+    mounted() {
+        if (window.netlifyIdentity) {
+                window.netlifyIdentity.on("init", user => {
+                if (!user) {
+                    window.netlifyIdentity.on("login", () => {
+                    document.location.href = "/admin/";
+                    });
+                }
+                });
+            }
+    }
 };
 </script>
 
