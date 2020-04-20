@@ -1,6 +1,6 @@
 ---
 layout: blog
-title: test
+title: test title
 thumbnail: /images/uploads/maxresdefault.jpg
 description: hello world
 ---
