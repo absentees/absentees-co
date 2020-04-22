@@ -76,7 +76,7 @@ query {
       description
       screenshots {
         id
-        responsiveImage(imgixParams: {fm: jpg, fit: fill, w: 800, h: 600, crop: top, bg: "10181c" }) {
+        responsiveImage(imgixParams: {fm: jpg, fit: fill, w: 800, h: 600, crop: top, bg: "dbdbdb" }) {
           ...responsiveImageFragment
         }
       }
@@ -101,5 +101,9 @@ export default {
 <style lang="scss" scoped>
 .project:first-of-type {
     border-top: none;
+}
+
+.screenshot {
+    flex-basis: 100%;
 }
 </style>

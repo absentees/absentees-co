@@ -7,6 +7,7 @@
 module.exports = {
   siteName: 'Scott Blissett - Designer/Developer',
   siteUrl: 'https://www.absentees.co',
+  siteDescription: 'Digital designer/developer based in Sydney NSW.',
   plugins: [
     {
       use: '@gridsome/source-filesystem',
@@ -15,14 +16,15 @@ module.exports = {
         path: '_posts/project/**/*.md',
       }
     },
-    // {
-    //   use: '@gridsome/source-datocms',
-    //   options: {
-    //     apiToken: process.env.DATO_API_TOKEN, // required
-    //     previewMode: false,
-    //     apiUrl: 'https://site-api.datocms.com'
-    //   }
-    // },
+    {
+      use: "gridsome-source-rss",
+      options: {
+        feedUrl: "https://www.instapaper.com/starred/rss/4947229/Id9po8tqCIjKH7uS41GkqTKs",
+        typeName: 'Articles',
+        // Parser options, see: https://www.npmjs.com/package/rss-parser
+        parser: {}
+      }
+    },
     {
       use: '@gridsome/plugin-google-analytics',
       options: {

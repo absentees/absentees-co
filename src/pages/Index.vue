@@ -32,13 +32,13 @@
 query {
 <<<<<<< Updated upstream
   datoCMS {
-    allProjects(orderBy: [title_ASC]) {
+    allProjects(filter: {published: {eq: true}}) {
       id
       title
       description
       screenshots {
         id,
-        responsiveImage(imgixParams: {fm: jpg, fit: fill, w: 800, h: 600, crop: top, bg: "10181c" }) {
+        responsiveImage(imgixParams: {fm: jpg, fit: fill, w: 800, h: 600, crop: top, bg: "dbdbdb" }) {
           ...responsiveImageFragment
         }
       }
@@ -48,7 +48,7 @@ query {
       description
       screenshots {
         id
-        responsiveImage(imgixParams: {fm: jpg, fit: fill, w: 800, h: 600, crop: top, bg: "10181c" }) {
+        responsiveImage(imgixParams: {fm: jpg, fit: fill, w: 800, h: 800, crop: top, bg: "dbdbdb" }) {
           ...responsiveImageFragment
         }
 =======
@@ -69,9 +69,23 @@ query {
 <script>
 export default {
     metaInfo: {
-        title: "Scott Blissett - Designer/Developer"
+        script: [
+            { src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' }
+        ],
+        title: "Scott Blissett - Designer/Developer",
+        titleTemplate: '%s',
     },
-    methods: {}
+    mounted() {
+        if (window.netlifyIdentity) {
+                window.netlifyIdentity.on("init", user => {
+                if (!user) {
+                    window.netlifyIdentity.on("login", () => {
+                    document.location.href = "/admin/";
+                    });
+                }
+                });
+            }
+    }
 };
 </script>
 
@@ -104,7 +118,7 @@ $mobile-width: 550px;
         "screenshots";
     grid-area: project;
 
-    padding: 1em 2em;
+    padding: 1em;
     border-top: 1px solid black;
 }
 
@@ -128,7 +142,7 @@ $mobile-width: 550px;
     display: flex;
 
     > .screenshot {
-        flex-basis: 50%;
+        flex-basis: 100%;
 
         img {
             width: 100%;
