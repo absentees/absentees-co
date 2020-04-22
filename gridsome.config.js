@@ -9,14 +9,11 @@ module.exports = {
   siteUrl: 'https://www.absentees.co',
   plugins: [
     {
-      use: '@gridsome/source-graphql',
+      use: '@gridsome/source-filesystem',
       options: {
-        url: 'https://graphql.datocms.com/',
-        fieldName: 'datoCMS',
-        headers: {
-          Authorization: `Authorization: ${process.env.DATO_API_TOKEN}`,
-        },
-      },
+        typeName: 'Projects',
+        path: '_posts/project/**/*.md',
+      }
     },
     // {
     //   use: '@gridsome/source-datocms',

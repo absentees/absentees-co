@@ -1,19 +1,19 @@
 <template>
     <Layout>
         <div class="header">
-            <div v-html="$page.datoCMS.about.bio"></div>
-            <div v-html="$page.datoCMS.about.links"></div>
+            <!-- <div v-html="$page.datoCMS.about.bio"></div> -->
+            <!-- <div v-html="$page.datoCMS.about.links"></div> -->
         </div>
         <div class="projects">
             <article
-                v-for="project in $page.datoCMS.allProjects"
-                :key="project.id"
+                v-for="project in $page.allProjects.edges"
+                :key="project.node.id"
                 class="project"
-                :id="project.id"
+                :id="project.node.id"
             >
                 <div class="description">
-                    <h2>{{ project.title }}</h2>
-                    <span v-html="project.description"></span>
+                    <h2>{{ project.node.title }}</h2>
+                    <span v-html="project.node.description"></span>
                 </div>
                 <div class="screenshots">
                     <div
@@ -21,48 +21,6 @@
                         :key="screenshot.id"
                         v-for="screenshot in project.screenshots"
                     >
-                        <div>
-                            <div
-                                v-bind:style="{
-                                    position: 'relative',
-                                    backgroundImage: `url(${screenshot.responsiveImage.base64}`,
-                                    backgroundColor: 'red',
-                                    backgroundSize: 'cover'
-                                }"
-                            >
-                                <div v-bind:style="{ paddingTop: '75%' }">
-                                    <picture
-                                        style="position: absolute; left: 0; top: 0; width: 100%"
-                                    >
-                                        <source
-                                            :srcset="
-                                                screenshot.responsiveImage
-                                                    .webpSrcSet
-                                            "
-                                            type="image/webp"
-                                        />
-                                        <source
-                                            :srcset="
-                                                screenshot.responsiveImage
-                                                    .srcSet
-                                            "
-                                        />
-                                        <img
-                                            :src="
-                                                screenshot.responsiveImage.src
-                                            "
-                                            :alt="
-                                                screenshot.responsiveImage.alt
-                                            "
-                                            :title="
-                                                screenshot.responsiveImage.title
-                                            "
-                                            loading="lazy"
-                                        />
-                                    </picture>
-                                </div>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </article>
@@ -72,6 +30,7 @@
 
 <page-query>
 query {
+<<<<<<< Updated upstream
   datoCMS {
     allProjects(orderBy: [title_ASC]) {
       id
@@ -92,29 +51,18 @@ query {
         responsiveImage(imgixParams: {fm: jpg, fit: fill, w: 800, h: 600, crop: top, bg: "10181c" }) {
           ...responsiveImageFragment
         }
+=======
+  allProjects {
+    edges {
+      node {
+        id
+        title
+        thumbnail
+        description
+>>>>>>> Stashed changes
       }
     }
-  },
-  datoCMS {
-    about {
-      bio
-      links
-    }
   }
-}
-
-fragment responsiveImageFragment on datoCMS_ResponsiveImage {
-  srcSet
-  webpSrcSet
-  sizes
-  src
-  width
-  height
-  aspectRatio
-  alt
-  title
-  bgColor
-  base64
 }
 </page-query>
 
