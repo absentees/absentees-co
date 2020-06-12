@@ -30,28 +30,6 @@
 
 <page-query>
 query {
-<<<<<<< Updated upstream
-  datoCMS {
-    allProjects(filter: {published: {eq: true}}) {
-      id
-      title
-      description
-      screenshots {
-        id,
-        responsiveImage(imgixParams: {fm: jpg, fit: fill, w: 800, h: 600, crop: top, bg: "dbdbdb" }) {
-          ...responsiveImageFragment
-        }
-      }
-    },
-     allSideProjects {
-      id
-      description
-      screenshots {
-        id
-        responsiveImage(imgixParams: {fm: jpg, fit: fill, w: 800, h: 800, crop: top, bg: "dbdbdb" }) {
-          ...responsiveImageFragment
-        }
-=======
   allProjects {
     edges {
       node {
@@ -59,7 +37,6 @@ query {
         title
         thumbnail
         description
->>>>>>> Stashed changes
       }
     }
   }
