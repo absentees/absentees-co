@@ -10,19 +10,6 @@
 </template>
 
 <page-query>
-query {
-    datoCMS {
-        hyperlink {
-            about(markdown:true)
-            allLinks {
-                id
-                url
-                createdAt
-            }
-        }
-    }
-}
-
 </page-query>
 
 <script>

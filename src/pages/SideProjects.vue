@@ -67,6 +67,7 @@
 </template>
 
 <page-query>
+<<<<<<< Updated upstream
 query {
   datoCMS {
      allSideProjects {
@@ -82,20 +83,9 @@ query {
     }
   }
 }
+=======
+>>>>>>> Stashed changes
 
-fragment responsiveImageFragment on datoCMS_ResponsiveImage {
-  srcSet
-  webpSrcSet
-  sizes
-  src
-  width
-  height
-  aspectRatio
-  alt
-  title
-  bgColor
-  base64
-}
 </page-query>
 
 <script>
