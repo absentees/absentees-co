@@ -16,12 +16,7 @@
                     <span v-html="project.node.description"></span>
                 </div>
                 <div class="screenshots">
-                    <div
-                        class="screenshot"
-                        :key="screenshot.id"
-                        v-for="screenshot in project.screenshots"
-                    >
-                    </div>
+                    <g-image :src="project.thumbnail" />
                 </div>
             </article>
         </div>
@@ -30,28 +25,6 @@
 
 <page-query>
 query {
-<<<<<<< Updated upstream
-  datoCMS {
-    allProjects(filter: {published: {eq: true}}) {
-      id
-      title
-      description
-      screenshots {
-        id,
-        responsiveImage(imgixParams: {fm: jpg, fit: fill, w: 800, h: 600, crop: top, bg: "dbdbdb" }) {
-          ...responsiveImageFragment
-        }
-      }
-    },
-     allSideProjects {
-      id
-      description
-      screenshots {
-        id
-        responsiveImage(imgixParams: {fm: jpg, fit: fill, w: 800, h: 800, crop: top, bg: "dbdbdb" }) {
-          ...responsiveImageFragment
-        }
-=======
   allProjects {
     edges {
       node {
@@ -59,7 +32,6 @@ query {
         title
         thumbnail
         description
->>>>>>> Stashed changes
       }
     }
   }
@@ -70,22 +42,25 @@ query {
 export default {
     metaInfo: {
         script: [
-            { src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' }
+            {
+                src:
+                    "https://identity.netlify.com/v1/netlify-identity-widget.js",
+            },
         ],
         title: "Scott Blissett - Designer/Developer",
-        titleTemplate: '%s',
+        titleTemplate: "%s",
     },
     mounted() {
         if (window.netlifyIdentity) {
-                window.netlifyIdentity.on("init", user => {
+            window.netlifyIdentity.on("init", (user) => {
                 if (!user) {
                     window.netlifyIdentity.on("login", () => {
-                    document.location.href = "/admin/";
+                        document.location.href = "/admin/";
                     });
                 }
-                });
-            }
-    }
+            });
+        }
+    },
 };
 </script>
 
