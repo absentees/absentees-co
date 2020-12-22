@@ -12,11 +12,12 @@
     "@gridsome/source-filesystem": "^0.6.2",
     "@gridsome/source-graphql": "^0.1.0",
     "gridsome": "^0.7.0",
+    "gridsome-plugin-netlify-cms": "^1.0.9",
     "gridsome-source-rss": "^1.0.0"
   },
   "devDependencies": {
+    "@gridsome/transformer-remark": "^0.5.0",
     "node-sass": "^4.13.1",
-    "sass-loader": "^8.0.2",
-    "@gridsome/transformer-remark": "^0.5.0"
+    "sass-loader": "^8.0.2"
   }
 }
