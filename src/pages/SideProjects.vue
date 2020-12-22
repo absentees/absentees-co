@@ -67,24 +67,6 @@
 </template>
 
 <page-query>
-<<<<<<< Updated upstream
-query {
-  datoCMS {
-     allSideProjects {
-      id
-      title
-      description
-      screenshots {
-        id
-        responsiveImage(imgixParams: {fm: jpg, fit: fill, w: 800, h: 600, crop: top, bg: "dbdbdb" }) {
-          ...responsiveImageFragment
-        }
-      }
-    }
-  }
-}
-=======
->>>>>>> Stashed changes
 
 </page-query>
 
