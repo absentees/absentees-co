@@ -16,12 +16,7 @@
                     <span v-html="project.node.description"></span>
                 </div>
                 <div class="screenshots">
-                    <div
-                        class="screenshot"
-                        :key="screenshot.id"
-                        v-for="screenshot in project.screenshots"
-                    >
-                    </div>
+                    <g-image :src="project.node.thumbnail"/>
                 </div>
             </article>
         </div>
