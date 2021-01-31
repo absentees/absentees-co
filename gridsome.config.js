@@ -13,7 +13,7 @@ module.exports = {
             use: "@gridsome/source-filesystem",
             options: {
                 typeName: "Projects",
-                path: "_posts/project/**/*.md",
+                path: "_posts/project/**/*.md"
             },
         },
         {
@@ -40,4 +40,9 @@ module.exports = {
             },
         },
     ],
+    transformers: {
+        //Add markdown support to all file-system sources
+        remark: {
+        }
+      }
 };

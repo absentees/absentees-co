@@ -13,7 +13,7 @@
             >
                 <div class="description">
                     <h2>{{ project.node.title }}</h2>
-                    <span v-html="project.node.description"></span>
+                    <span v-html="project.node.content"></span>
                 </div>
                 <div class="screenshots">
                     <g-image :src="project.node.thumbnail"/>
@@ -32,6 +32,7 @@ query {
         title
         thumbnail
         description
+        content
       }
     }
   }
