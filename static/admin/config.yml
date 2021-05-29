@@ -18,9 +18,9 @@ collections:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Featured Image", name: "thumbnail", widget: "image"}
       - {label: "Body", name: "body", widget: "markdown"}
-  - name: "experiments" # Used in routes, e.g., /admin/collections/blog
-    label: "Experiments" # Used in the UI
-    folder: "_posts/experiments" # The path to the folder where the documents are stored
+  - name: "experiment" # Used in routes, e.g., /admin/collections/blog
+    label: "Experiment" # Used in the UI
+    folder: "_posts/experiment" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     media_folder: '/static/images/uploads'

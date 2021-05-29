@@ -17,6 +17,13 @@ module.exports = {
             },
         },
         {
+            use: "@gridsome/source-filesystem",
+            options: {
+                typeName: "Experiments",
+                path: "_posts/experiment/**/*.md"
+            },
+        },
+        {
             use: "gridsome-source-rss",
             options: {
                 feedUrl:

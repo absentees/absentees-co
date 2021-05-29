@@ -1,9 +1,5 @@
 <template>
   <Layout>
-    <div class="header">
-      <!-- <div v-html="$page.datoCMS.about.bio"></div> -->
-      <!-- <div v-html="$page.datoCMS.about.links"></div> -->
-    </div>
     <div class="projects">
       <Project
         v-for="project in $page.Projects.edges"
@@ -44,14 +40,5 @@ export default {
 </script>
 
 <style lang="scss">
-$mobile-width: 550px;
 
-.container {
-  box-sizing: border-box;
-  width: 100%;
-  margin: 0 auto;
-  padding: 1rem 2rem;
-
-  position: relative;
-}
 </style>

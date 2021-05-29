@@ -1,5 +1,5 @@
 <template>
-  <article class="project">
+  <article :id="project.node.id" class="project">
     <div class="description">
       <h2>{{ project.node.title }}</h2>
       <span v-html="project.node.content"></span>
@@ -26,5 +26,7 @@ export default {
     img {
         width:100%;
     }
+
+    margin-bottom: 4ch;
 }
 </style>

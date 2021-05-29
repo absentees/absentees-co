@@ -1,7 +1,7 @@
 <template>
     <div class="layout">
        <Header/>
-        <main class="grid-container">
+        <main>
             <slot />
         </main>
         <a class="backToTop" href="#title">Back to top</a>
@@ -33,9 +33,9 @@ body {
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    max-width: 800px;
+    max-width: 80ch;
     width:100%;
-    padding: 2ch;
+    padding: 2ch 0;
     margin: auto;
     color: #000;
 }
@@ -45,8 +45,14 @@ a {
 }
 
 h1 {
-    // font-weight: 500;
+    font-weight: 500;
+    font-size: 22px;
     line-height: 1em;
+}
+
+h2 {
+    font-size: 18px;
+    font-weight: 500;
 }
 
 p {
@@ -55,7 +61,7 @@ p {
 
 .backToTop {
     display: block;
-    margin: 1em auto;
+    margin: 4ch auto;
 }
 
 ul {
