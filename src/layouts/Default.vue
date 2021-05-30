@@ -1,24 +1,27 @@
 <template>
     <div class="layout">
-        <header class="header">
-            <h1 id="title" class="title">
-                Scott Blissett - Designer/Developer
-            </h1>
-        </header>
-        <nav>
-            <ul>
-                <li><g-link to="/">Home</g-link></li>
-                <li><g-link to="/side-projects/">Side Projects</g-link></li>
-                <li><g-link to="/hyperlinks/">Hyperlinks</g-link></li>
-                <li><g-link to="/reads/">Reads</g-link></li>
-            </ul>
-        </nav>
-        <main class="grid-container">
+       <Header/>
+        <main>
             <slot />
         </main>
         <a class="backToTop" href="#title">Back to top</a>
     </div>
 </template>
+
+<script>
+import Header from "~/components/Header.vue";
+
+export default {
+    metaInfo: {
+        title: "Scott Blissett - Designer/Developer",
+        titleTemplate: '%s',
+    },
+    components: {
+        Header
+    }
+};
+</script>
+
 
 <style lang="scss">
 html {
@@ -27,10 +30,12 @@ html {
 }
 
 body {
+    box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     max-width: 80ch;
-    padding: 2ch;
+    width:100%;
+    padding: 2ch 0;
     margin: auto;
     color: #000;
 }
@@ -40,8 +45,14 @@ a {
 }
 
 h1 {
-    // font-weight: 500;
+    font-weight: 500;
+    font-size: 22px;
     line-height: 1em;
+}
+
+h2 {
+    font-size: 18px;
+    font-weight: 500;
 }
 
 p {
@@ -50,7 +61,7 @@ p {
 
 .backToTop {
     display: block;
-    margin: 1em auto;
+    margin: 4ch auto;
 }
 
 ul {
