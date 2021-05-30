@@ -2,13 +2,22 @@
   <Layout>
     <p>
       Some links I have saved on
-      <a href="https://www.are.na/absentees-_/">are.na</a>
+      <a target="_blank" href="https://www.are.na/absentees-_/web-0abin7eksxc"
+        >are.na</a
+      >
     </p>
     <ul>
-      <li v-for="edge in $page.allBlock.edges" :key="edge.node.id">
-        {{edge.node.title}}
-        <img :src="edge.node.image.url" alt="" srcset="">
-      </li>
+      <a
+        v-for="edge in $page.allBlock.edges"
+        :key="edge.node.id"
+        :href="edge.node.url"
+      >
+        <li>
+          <img :src="edge.node.image.url" />
+          <span>{{ edge.node.title }}</span>
+          
+        </li>
+      </a>
     </ul>
   </Layout>
 </template>
@@ -23,6 +32,7 @@ query {
         image {
           url
         }
+        url
       }
     }
   }
@@ -34,7 +44,31 @@ export default {};
 </script>
 
 <style lang="scss" scoped>
+ul {
+  display: flex;
+  flex-wrap: wrap;
+
+  a {
+    box-sizing: border-box;
+    width: 100%;
+
+    &:hover {
+      img {
+        width: 400px;
+      }
+    }
+  }
+
+  li {
+    img {
+      width: 15px;
+      margin-right: 2ch;
+    }
+  }
+}
+
 img {
   width: 100%;
+  max-width: 200px;
 }
 </style>

@@ -14,16 +14,30 @@ module.exports = function (api) {
       typeName: 'Block'
     });
 
-    const { contents } = await arena.channel('web-0abin7eksxc')
-      .get();
 
-    for (const block of contents) {
-      if (block.image) {
-        blocks.addNode({
-          id: block.id,
-          title: block.title,
-          image: block.image.display
-        })
+    // const channel = await arena.channel('web-0abin7eksxc').get();
+    const ch = await arena.channel('web-0abin7eksxc').get({ 
+      page: 1, 
+      per: 100,
+    });
+
+    
+
+    for (let i = 1; i <= Math.ceil(ch.length/100); i++) {
+      let p = await arena.channel('web-0abin7eksxc').get({ 
+        page: i, 
+        per: 100,
+      });
+      console.log(p.page);
+      for (const block of p.contents) {
+        if (block.image) {
+          blocks.addNode({
+            id: block.id,
+            title: block.title,
+            image: block.image.thumb,
+            url: (block.source != null) ? block.source.url : ""
+          })
+        }
       }
     }
   })
