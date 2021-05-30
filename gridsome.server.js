@@ -5,9 +5,27 @@
 // Changes here require a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
+const Arena = require("are.na");
+const arena = new Arena();
+
 module.exports = function (api) {
-  api.loadSource(({ addCollection }) => {
-    // Use the Data Store API here: https://gridsome.org/docs/data-store-api/
+  api.loadSource(async ({ addCollection }) => {
+    const blocks = addCollection({
+      typeName: 'Block'
+    });
+
+    const { contents } = await arena.channel('web-0abin7eksxc')
+      .get();
+
+    for (const block of contents) {
+      if (block.image) {
+        blocks.addNode({
+          id: block.id,
+          title: block.title,
+          image: block.image.display
+        })
+      }
+    }
   })
 
   api.createPages(({ createPage }) => {
