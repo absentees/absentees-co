@@ -13,14 +13,21 @@ module.exports = {
             use: "@gridsome/source-filesystem",
             options: {
                 typeName: "Projects",
-                path: "_posts/project/**/*.md"
+                path: "_content/posts/project/**/*.md"
             },
         },
         {
             use: "@gridsome/source-filesystem",
             options: {
                 typeName: "Experiments",
-                path: "_posts/experiment/**/*.md"
+                path: "_content/posts/experiment/**/*.md"
+            },
+        },
+        {
+            use: "@gridsome/source-filesystem",
+            options: {
+                typeName: "CV",
+                path: "_content/pages/cv.md"
             },
         },
         {
