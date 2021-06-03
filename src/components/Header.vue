@@ -55,9 +55,9 @@ header {
 
 nav {
   a {
-    opacity: 60%;
+    opacity: 0.6;
     &.active--exact {
-      opacity: 100%;
+      opacity: 1;
     }
   }
 }
