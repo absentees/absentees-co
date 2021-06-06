@@ -14,6 +14,7 @@
         <li><g-link to="/experiments/">Experiments</g-link></li>
         <li><g-link to="/reads/">Reads</g-link></li>
         <li><g-link to="/hyperlinks/">Hyperlinks</g-link></li>
+        <li><g-link to="/cv/">CV</g-link></li>
       </ul>
     </nav>
   </header>

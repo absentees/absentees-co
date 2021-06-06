@@ -40,7 +40,12 @@ query {
 </page-query>
 
 <script>
-export default {};
+export default {
+    metaInfo: {
+        title: "Hyperlinks",
+        meta: []
+    }
+};
 </script>
 
 <style lang="scss" scoped>

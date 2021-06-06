@@ -26,8 +26,8 @@ module.exports = {
         {
             use: "@gridsome/source-filesystem",
             options: {
-                typeName: "CV",
-                path: "_content/pages/cv.md"
+                typeName: "Experience",
+                path: "_content/pages/experience.md"
             },
         },
         {

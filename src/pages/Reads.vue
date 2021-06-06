@@ -28,7 +28,7 @@ query {
 <script>
 export default {
     metaInfo: {
-        title: "Hyperlinks",
+        title: "Reads",
         meta: []
     }
 };

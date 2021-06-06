@@ -45,8 +45,8 @@ collections:
                     widget: "image",
                 }
         - label: "CV"
-          name: "cv"
-          file: "_content/pages/cv.md"
+          name: "experience"
+          file: "_content/pages/experience.md"
           fields:
             - label: "Experience"
               name: "jobs"

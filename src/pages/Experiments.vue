@@ -30,6 +30,7 @@ import Project from "~/components/Project.vue";
 
 export default {
   metaInfo: {
+    title: "Experiments"
   },
   components: {
     Project,
