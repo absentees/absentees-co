@@ -1,7 +1,7 @@
 ---
 layout: blog
 title: Oporto website
-thumbnail: /images/uploads/www-oporto-com-au.png
+thumbnail: ../../static/images/uploads/www-oporto-com-au.png
 ---
 With Present Company we developed and designed and built [Oporto's
 new website](https://www.oporto.com.au/). Design had to be adaptable and
