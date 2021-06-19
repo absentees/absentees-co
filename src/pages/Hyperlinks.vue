@@ -1,7 +1,7 @@
 <template>
   <Layout>
     <p>
-      Some links I have saved on
+      Recent links saved on
       <a target="_blank" href="https://www.are.na/absentees-_/web-0abin7eksxc"
         >are.na</a
       >

@@ -1,7 +1,7 @@
 ---
 layout: blog
 title: Over-engineering a toilet door
-thumbnail: ../../static/images/uploads/2016-11-14-06-31-48-1.jpg
+thumbnail: ../../../static/images/uploads/2016-11-14-06-31-48-1.jpg
 ---
 At a previous workplace we had one downstairs toilet. I noticed that staff would often walk to the toilet only to be disappointed that it was occupied.
 

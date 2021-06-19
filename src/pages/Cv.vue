@@ -1,24 +1,23 @@
 <template>
     <Layout>
-        <p>Some things i've been reading on <a href="https://instapaper.com/">Instapaper</a></p>
-        <ul class="links">
-            <li v-for="edge in $page.allArticles.edges" :key="edge.node.id">
-                <a :href="edge.node.link" target="_blank" rel="noopener noreferrer">{{
-                    edge.node.title
-                }}</a>
-            </li>
-        </ul>
+        <p>Work experience</p>
+        <Job v-for="job in $page.Experience.edges[0].node.jobs"
+        :key="job"
+        :job="job"/>
     </Layout>
 </template>
 
 <page-query>
 query {
-  allArticles {
+  Experience: allExperience {
     edges {
       node {
-        id
-        title
-        link
+        jobs {
+          where
+          years
+          role
+          description
+        }
       }
     }
   }
@@ -26,10 +25,15 @@ query {
 </page-query>
 
 <script>
+import Job from "~/components/Job.vue";
+
 export default {
     metaInfo: {
-        title: "Hyperlinks",
+        title: "CV",
         meta: []
+    },
+    components: {
+        Job
     }
 };
 </script>

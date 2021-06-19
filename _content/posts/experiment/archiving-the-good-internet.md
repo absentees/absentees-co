@@ -1,7 +1,7 @@
 ---
 layout: blog
 title: Archiving the good internet
-thumbnail: ../../static/images/uploads/screenshot2020-02-18-hello-world-good-internet.png
+thumbnail: ../../../static/images/uploads/screenshot2020-02-18-hello-world-good-internet.png
 ---
 I'm constantly looking at multiple sites for references, I was collecting them using an old Mac App called Ember. It's great at what it did but was no longer under development.
 

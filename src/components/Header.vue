@@ -39,7 +39,7 @@ query {
 export default {
   computed: {
     randomExperiment: function () {
-      let e = this.$static.Experiments.edges[`${Math.floor(Math.random() * 4)}`]
+      let e = this.$static.Experiments.edges[`${Math.floor(Math.random() * this.$static.Experiments.edges.length)}`]
         .node;
       e.title = e.title.toLowerCase();
       e.path = "/experiments#" + e.id;

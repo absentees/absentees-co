@@ -1,7 +1,7 @@
 ---
 layout: blog
 title: Scraping the internet for relevant domains
-thumbnail: ../../static/images/uploads/screen-shot-2018-01-07-at-8-56-06-pm.png
+thumbnail: ../../../static/images/uploads/screen-shot-2018-01-07-at-8-56-06-pm.png
 ---
 [Relevant Domains](http://relevant.domains "Relevant Domains") scrapes the last year or so of Urban Dictionary words and definitions, turns them into dot coms, checks those against the Domainr API for availability and churns out a static website to flick through them all.
 

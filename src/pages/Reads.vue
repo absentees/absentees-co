@@ -1,6 +1,6 @@
 <template>
     <Layout>
-        <p>Some things i've been reading on <a href="https://instapaper.com/">Instapaper</a></p>
+        <p>Recent reading on <a href="https://instapaper.com/">Instapaper</a></p>
         <ul class="links">
             <li v-for="edge in $page.allArticles.edges" :key="edge.node.id">
                 <a :href="edge.node.link" target="_blank" rel="noopener noreferrer">{{

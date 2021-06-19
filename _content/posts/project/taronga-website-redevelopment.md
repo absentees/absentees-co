@@ -1,7 +1,7 @@
 ---
 layout: blog
 title: Taronga Website Redevelopment
-thumbnail: ../../static/images/uploads/screenshot2020-04-16-taronga-zoo-sydney.jpg
+thumbnail: ../../../static/images/uploads/screenshot2020-04-16-taronga-zoo-sydney.jpg
 ---
 Taronga Conservation Foundation has a wide range of products available from
 General Admission tickets, memberships, accommodation, a learning institute
