@@ -2,11 +2,9 @@
   <header class="header">
     <h1 id="title" class="title">Scott Blissett - Designer/Developer</h1>
     <p>
-      I'm a senior designer with a web development background in Sydney. I
-      work with <a href="https://www.pollen.com.au/">Pollen</a> where we design
-      premium digital brand experiences and in my spare time
-      <g-link :to="randomExperiment.path">{{ randomExperiment.title }}</g-link
-      >.
+      Senior designer with a web development background, based in Sydney, Australia. Currently working with <a href="https://www.pollen.com.au/">Pollen</a> designing
+      premium digital brand experiences and <g-link :to="randomExperiment.path">{{ randomExperiment.title }}</g-link
+      > on the side.
     </p>
     <nav>
       <ul>
