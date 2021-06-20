@@ -4,7 +4,7 @@ title: Oporto Flame Rewards App
 role: Lead UI Designer
 thumbnail: ../../../static/images/uploads/screenshot2020-04-16-oporto-flame-rewards-apps-on-google-play.png
 ---
-We designed and built a loyalty app for Oporto's revamped loyalty platform, Flame Rewards. The app's goals were simple, to streamline the signup process, reduce the number of support tickets being raised by integrating support functionality in-app, and to allow for scaling across multiple brands.
+Present Company designed and built a loyalty app for Oporto's revamped loyalty platform, Flame Rewards. The app's goals were simple, to streamline the signup process, reduce the number of support tickets being raised by integrating support functionality in-app, and to allow for scaling across multiple brands.
 
 A large part of my work was creating a Framer prototype to demonstrate look and feel to internal stakeholders.
 
