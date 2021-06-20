@@ -1,7 +1,11 @@
 <template>
     <Layout>
         <p>Work experience</p>
-        <Job v-for="job in $page.Experience.edges[0].node.jobs"
+        <Job v-for="job in $page.About.edges[0].node.jobs"
+        :key="job"
+        :job="job"/>
+        <p>Education</p>
+        <Job v-for="job in $page.About.edges[0].node.education"
         :key="job"
         :job="job"/>
     </Layout>
@@ -9,7 +13,7 @@
 
 <page-query>
 query {
-  Experience: allExperience {
+  About: allAbout {
     edges {
       node {
         jobs {
@@ -17,6 +21,11 @@ query {
           years
           role
           description
+        }
+        education {
+          where
+          years
+          role
         }
       }
     }

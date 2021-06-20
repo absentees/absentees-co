@@ -12,4 +12,11 @@ jobs:
     years: November 2010- June 2012
     role: Analyst/Programmer
     description: As part of a small, 4-person agile development team. I contributed to the development of a state-wide Operational Management System to manage the day-to-day ‘requests for assistance’ that the NSW SES receives. Main responsbility was implementing new functionality, rewriting a GNAF (Geocoded National Address File) WCF service, code reviewing team members and bug fixing.
+education:
+  - where: Billy Blue College of Design
+    years: July 2012 - October 2014
+    role: Bachelor of Applied Design (Multimedia Design)
+  - where: University of Wollongong, NSW
+    years: January 2008 - November 2010
+    role: Bachelor of Computer Science (Software Engineering)
 ---

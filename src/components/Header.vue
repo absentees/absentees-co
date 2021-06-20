@@ -13,6 +13,10 @@
         <li><g-link to="/reads/">Reads</g-link></li>
         <li><g-link to="/hyperlinks/">Hyperlinks</g-link></li>
         <li><g-link to="/cv/">CV</g-link></li>
+        <li>---</li>
+        <li><a target="_blank" href="https://github.com/absentees">Github</a></li>
+        <li><a target="_blank" href="https://www.are.na/absentees-_">Are.na</a></li>
+        <li><a href="mailto:emailabsentees@gmail.com">emailabsentees@gmail.com</a></li>
       </ul>
     </nav>
   </header>

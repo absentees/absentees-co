@@ -1,6 +1,7 @@
 ---
 layout: blog
 title: AEMC Retail energy competition review 2019
+role: Lead Designer
 thumbnail: ../../../static/images/uploads/screenshot2020-07-17-aemc-retail-competition-review-2019.png
 ---
 With an appetite to shake up their yearly competition review website design

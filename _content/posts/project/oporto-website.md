@@ -1,6 +1,7 @@
 ---
 layout: blog
 title: Oporto website
+role: Lead Designer, Front-end Developer
 thumbnail: ../../../static/images/uploads/www-oporto-com-au.png
 ---
 With Present Company we developed and designed and built [Oporto's

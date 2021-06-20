@@ -1,5 +1,6 @@
 <template>
   <Layout>
+    <p>Selected projects below, if you would like a deep dive into anything, <a href="mailto:emailabsentees@gmail.com">let's chat</a>.</p>
     <div class="projects">
       <Project
         v-for="project in $page.Projects.edges"
@@ -17,6 +18,7 @@ query {
       node {
         id
         title
+        role
         thumbnail
         content
       }

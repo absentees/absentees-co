@@ -28,7 +28,6 @@ module.exports = function (api) {
         page: i, 
         per: 100,
       });
-      console.log(p.page);
       for (const block of p.contents) {
         if (block.image) {
           blocks.addNode({
