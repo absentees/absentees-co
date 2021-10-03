@@ -13,3 +13,6 @@ src/html/pages/**/*
 /src/.temp/**/*
 src/.temp/**/*
 src/.temp/
+
+# Local Netlify folder
+.netlify

@@ -33,6 +33,6 @@ export default {
         opacity: 0.6;
     }
 
-    margin-bottom: 4ch;
+    margin-bottom: 8ch;
 }
 </style>
