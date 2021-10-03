@@ -3,7 +3,7 @@
     <p>
       Recent links saved on
       <a target="_blank" href="https://www.are.na/absentees-_/web-0abin7eksxc"
-        >are.na ↗</a
+        >are.na</a
       >
     </p>
     <ul>
@@ -14,7 +14,7 @@
       >
         <li>
           <img :src="edge.node.image.url" />
-          <span>{{ edge.node.title }} ↗</span>
+          <span>{{ edge.node.title }}</span>
           
         </li>
       </a>

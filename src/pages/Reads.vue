@@ -1,11 +1,11 @@
 <template>
     <Layout>
-        <p>Recent reading on <a href="https://instapaper.com/">Instapaper ↗</a></p>
+        <p>Recent reading on <a href="https://instapaper.com/">Instapaper</a></p>
         <ul class="links">
             <li v-for="edge in $page.allArticles.edges" :key="edge.node.id">
                 <a :href="edge.node.link" target="_blank" rel="noopener noreferrer">{{
                     edge.node.title
-                }} ↗</a>
+                }}</a>
             </li>
         </ul>
     </Layout>

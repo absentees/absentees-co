@@ -19,7 +19,7 @@
     <div id="external-links">
       <a target="_blank" href="https://github.com/absentees">Github ↗</a>
       <a target="_blank" href="https://www.are.na/absentees-_">Are.na ↗</a>
-      <a href="mailto:emailabsentees@gmail.com">emailabsentees@gmail.com ↗</a>
+      <a href="mailto:emailabsentees@gmail.com">Email ↗</a>
     </div>
   </header>
 </template>
