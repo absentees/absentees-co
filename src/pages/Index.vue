@@ -12,7 +12,7 @@
 
 <page-query>
 query {
-  Projects: allProjects {
+  Projects: allProject {
     edges {
       node {
         id
@@ -20,6 +20,7 @@ query {
         role
         thumbnail
         content
+        path
       }
     }
   }
