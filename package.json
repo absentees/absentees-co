@@ -10,7 +10,6 @@
   },
   "dependencies": {
     "@gridsome/plugin-google-analytics": "^0.1.0",
-    "@gridsome/source-datocms": "^0.2.1",
     "@gridsome/source-filesystem": "^0.6.2",
     "@gridsome/source-graphql": "^0.1.0",
     "are.na": "^0.1.5",
