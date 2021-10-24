@@ -4,7 +4,7 @@
     <main>
       <slot />
     </main>
-    <a class="backToTop" href="#title">Back to top</a>
+    <!-- <a class="backToTop" href="#title">Back to top</a> -->
   </div>
 </template>
 

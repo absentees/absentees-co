@@ -1,10 +1,10 @@
 <template>
   <Layout>
     <div class="projects">
-      <Project
-        v-for="project in $page.Experiments.edges"
-        :key="project.id"
-        :project="project"
+      <experiment
+        v-for="experiment in $page.Experiments.edges"
+        :key="experiment.id"
+        :experiment="experiment"
       />
     </div>
   </Layout>
@@ -26,14 +26,14 @@ query {
 </page-query>
 
 <script>
-import Project from "~/components/Project.vue";
+import Experiment from "~/components/Experiment.vue";
 
 export default {
   metaInfo: {
     title: "Experiments"
   },
   components: {
-    Project,
+    Experiment
   },
 };
 </script>

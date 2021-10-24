@@ -1,11 +1,11 @@
 <template>
-  <Layout>
+  <!-- <Layout> -->
     <article>
       <h1>{{ $page.project.title }}</h1>
       <span class="role">{{ $page.project.role }}</span>
       <div v-html="$page.project.content"></div>
     </article>
-  </Layout>
+  <!-- </Layout> -->
 </template>
 
 <page-query>

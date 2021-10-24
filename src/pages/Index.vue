@@ -1,12 +1,12 @@
 <template>
   <Layout>
-    <div class="projects">
+    <!-- <div class="projects">
       <Project
         v-for="project in $page.Projects.edges"
         :key="project.id"
         :project="project"
       />
-    </div>
+    </div> -->
   </Layout>
 </template>
 
