@@ -17,8 +17,9 @@
 		</nav>
 		<div id="external-links">
 			<a target="_blank" href="https://github.com/absentees">Github ↗</a>
-			<a target="_blank" href="https://www.are.na/absentees-_">Are.na ↗</a>
+			<a target="_blank" href="https://www.are.na/scott-b-_">Are.na ↗</a>
 			<a href="mailto:emailabsentees@gmail.com">Email ↗</a>
+			<a href="mailto:emailabsentees@gmail.com">Portfolio available on request ↗</a>
 		</div>
 	</header>
 </template>
