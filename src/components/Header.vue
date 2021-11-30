@@ -66,15 +66,18 @@ header {
 
 #external-links {
 	> a {
+		display: inline-block;
 		margin-right: 1rem;
 	}
 }
 
 nav {
+	display: block;
 	font-size: 1rem;
 	margin-bottom: 1rem;
 
 	> a {
+		display: inline-block;
 		margin-right: 1rem;
 	}
 
