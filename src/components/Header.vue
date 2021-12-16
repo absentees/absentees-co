@@ -1,8 +1,8 @@
 <template>
 	<header class="header">
-		<h1 id="title" class="title">Scott Blissett — Designer/Developer</h1>
+		<h1 id="title" class="title">Scott Blissett — Product Designer/Developer</h1>
 		<p id="bio">
-			Senior designer with a web development background, based in Sydney,
+			Senior product designer with a web development background, based in Sydney,
 			Australia. Currently working with
 			<a href="https://www.pollen.com.au/">Pollen ↗</a> designing premium digital
 			brand experiences. In my spare time you can find me

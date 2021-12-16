@@ -14,7 +14,7 @@
       >
         <li>
           <img :src="edge.node.image.url" />
-          <span>{{ edge.node.title }}</span>
+          <!-- <span>{{ edge.node.title }}</span> -->
           
         </li>
       </a>
@@ -51,12 +51,14 @@ export default {
 <style lang="scss" scoped>
 ul {
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
+  column-gap: 0.5rem;
 
   a {
     box-sizing: border-box;
-    width: 100%;
-    margin-bottom: 1rem;
+    // width: 100%;
+    margin-bottom: 0.5rem;    
 
     &:hover {
       img {
@@ -66,9 +68,12 @@ ul {
   }
 
   li {
+    text-align: center;
+    margin: 0;
+
     img {
       width: 15px;
-      margin-right: 2ch;
+      margin: 0 0.25rem;
     }
   }
 }

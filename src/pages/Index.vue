@@ -32,7 +32,7 @@ import Project from "~/components/Project.vue";
 
 export default {
   metaInfo: {
-    title: "Scott Blissett - Designer/Developer",
+    title: "Scott Blissett - Product Designer/Developer",
     titleTemplate: "%s",
   },
   components: {
