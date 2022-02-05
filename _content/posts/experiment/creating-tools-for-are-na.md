@@ -12,9 +12,9 @@ I use are.na as a bit of a bookmarking, collection tool. Constantly adding URLs 
 [are.na cli tools](https://github.com/absentees/arena-cli-tools) is something i built to cater to some of my workflows.
 
 Uses:
-- xo
-- meow
-- my own fork of arena-js
-- cli-meow-help
+* xo
+* meow
+* my own fork of arena-js
+* cli-meow-help
 
 I'm continuing to build on it and add new functions as i need them.

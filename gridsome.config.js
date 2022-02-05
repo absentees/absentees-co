@@ -33,6 +33,13 @@ module.exports = {
 		{
 			use: "@gridsome/source-filesystem",
 			options: {
+				typeName: "Websites",
+				path: "_content/posts/website/**/*.md"
+			},
+		},
+		{
+			use: "@gridsome/source-filesystem",
+			options: {
 				typeName: "About",
 				path: "_content/pages/about.md"
 			},

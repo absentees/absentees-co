@@ -1,6 +1,6 @@
 <template>
 	<header class="header">
-		<h1 id="title" class="title">Scott Blissett — Product Designer/Developer</h1>
+		<p id="title" class="title">Scott Blissett — Product Designer/Developer</p>
 		<p id="bio">
 			Senior product designer with a web development background, based in Sydney,
 			Australia. Currently working with
@@ -10,6 +10,7 @@
 		</p>
 		<nav>
 			<g-link to="/">Home</g-link>
+			<g-link to="/small-websites">Small web</g-link>
 			<g-link to="/experiments/">Experiments</g-link>
 			<g-link to="/reads/">Reads</g-link>
 			<g-link to="/hyperlinks/">Hyperlinks</g-link>
