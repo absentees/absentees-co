@@ -1,6 +1,6 @@
 ---
 layout: blog
-title: building an are.na firefox extension
+title: Building an are.na firefox extension
 thumbnail: ../../../static/images/uploads/screenshot-2022-06-02-085333.png
 ---
 I use are.na daily for bookmarking and discovery of things that i wouldn't find anywhere else. Navigating to my individual channels to grab a reference currently involves navigating to are.na to search or browse the index of my profile. I wanted a direct route.
