@@ -8,21 +8,7 @@ module.exports = {
 	siteName: "Scott Blissett - Designer/Developer",
 	siteUrl: "https://www.absentees.co",
 	siteDescription: "Digital designer/developer based in Sydney NSW.",
-	templates: {
-		Project: [{
-			path: '/project/:title',
-			component: './src/templates/Project.vue'
-		}]
-	},
 	plugins: [
-		{
-			use: "@gridsome/source-filesystem",
-			options: {
-				typeName: "Project",
-				path: "_content/posts/project/**/*.md",
-				resolveAbsolutePaths: true
-			},
-		},
 		{
 			use: "@gridsome/source-filesystem",
 			options: {

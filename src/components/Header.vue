@@ -2,11 +2,7 @@
 	<header class="header">
 		<p id="title" class="title">Scott Blissett — Product Designer/Developer</p>
 		<p id="bio">
-			Senior product designer with a web development background, based in Sydney,
-			Australia. Currently working with
-			<a href="https://www.pollen.com.au/">Pollen ↗</a> designing premium digital
-			brand experiences. In my spare time you can find me
-			<g-link :to="randomExperiment.path">{{ randomExperiment.title }}</g-link>.
+			Senior product designer with a web development background, based in Sydney, Australia.
 		</p>
 		<nav>
 			<g-link to="/">Home</g-link>
