@@ -1,5 +1,9 @@
 ---
 jobs:
+  - where: Beem
+    years: September 2022 - Present
+    role: Senior Product Designer
+    description: Working with the incredible Beem Design Team to deliver excellent experiences end-to-end across all platforms and audiences.
   - where: Pollen
     years: July 2019 - September 2021 (3 years)
     role: Senior Product Designer

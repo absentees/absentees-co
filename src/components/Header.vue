@@ -1,8 +1,8 @@
 <template>
 	<header class="header">
-		<p id="title" class="title">Scott Blissett — Product Designer/Developer</p>
+		<p id="title" class="title">Scott Blissett — Product Designer</p>
 		<p id="bio">
-			Senior product designer with a web development background, based in Sydney, Australia.
+			Senior product designer working with <a href="http://beem.com.au">Beem</a>, based in Sydney, Australia.
 		</p>
 		<nav>
 			<g-link to="/">Home</g-link>

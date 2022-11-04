@@ -13,7 +13,7 @@ import Header from "~/components/Header.vue";
 
 export default {
   metaInfo: {
-    title: "Scott Blissett — Product Designer/Developer",
+    title: "Scott Blissett — Product Designer",
     titleTemplate: "%s",
   },
   components: {
