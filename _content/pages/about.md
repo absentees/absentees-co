@@ -5,7 +5,7 @@ jobs:
     role: Senior Product Designer
     description: Working with the incredible Beem Design Team to deliver excellent experiences end-to-end across all platforms and audiences.
   - where: Pollen
-    years: July 2019 - September 2021 (3 years)
+    years: July 2019 - September 2022 (3 years)
     role: Senior Product Designer
     description: Contributing to design, research and strategy to create a wide range of digital experiences for clients from cryptocurrency traded funds to pro-bono legal platforms. Experience in varying fidelity prototyping, interaction design, design systems and interface design.
   - where: Present Company
