@@ -13,7 +13,6 @@ query {
 
 <style lang="scss">
 @import url("https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique&display=swap");
-// @import url('https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+Antique:wght@500&display=swap');
 
 html {
   font-family: "Zen Kaku Gothic Antique", sans-serif;

@@ -31,7 +31,12 @@ export default {
 html {
   background-color: #f7f7f7;
   font-family: sans-serif;
-  width: 100vw;
+  width: 100vw; 
+
+  // enable dark mode
+  @media (prefers-color-scheme: dark) {
+    background-color: #0c0c0c;
+  }
 }
 
 body {
@@ -46,6 +51,10 @@ body {
   }
   margin: 0 auto;
   color: #000;
+
+  @media (prefers-color-scheme: dark) {
+    color: #dbdbdb;
+  }
 }
 
 a {
@@ -63,6 +72,15 @@ a {
 
   &:hover {
     background-color: rgba(0, 0, 0, 0.1);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: inherit;
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+    }
   }
 }
 

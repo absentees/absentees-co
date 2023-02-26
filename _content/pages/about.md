@@ -3,7 +3,7 @@ jobs:
   - where: Beem
     years: September 2022 - Present
     role: Senior Product Designer
-    description: Working with the incredible Beem Design Team to deliver excellent experiences end-to-end across all platforms and audiences.
+    description: Working with the incredible Beem Design Team to deliver the best payment platform experiences in Australia, from consumers to merchants and everyone in between, across both native to web platforms.
   - where: Pollen
     years: July 2019 - September 2022 (3 years)
     role: Senior Product Designer
