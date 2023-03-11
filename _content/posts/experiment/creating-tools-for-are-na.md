@@ -9,7 +9,7 @@ I'm a huge fan of the are.na platform, community and approach to web in general.
 
 I use are.na as a bit of a bookmarking, collection tool. Constantly adding URLs and screenshots to a growing list of categories.
 
-[are.na cli tools](https://github.com/absentees/arena-cli-tools) is something i built to cater to some of my workflows.
+[are.na cli tools ↗](https://github.com/absentees/arena-cli-tools) is something i built to cater to some of my workflows.
 
 Uses:
 * xo

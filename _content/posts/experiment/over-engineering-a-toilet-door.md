@@ -9,7 +9,7 @@ To fix this i grabbed our dusty Rasbperry Pi, a lot of blutack and a reed switch
 
 The bits:
 
-* [Firebase](https://firebase.google.com/)
+* [Firebase ↗](https://firebase.google.com/)
 * Raspberry Pi
-* [Resin.io (now Balena.io)](https://www.balena.io/)
-* [Express](https://github.com/expressjs/express)
+* [Resin.io (now Balena.io) ↗](https://www.balena.io/)
+* [Express ↗](https://github.com/expressjs/express)

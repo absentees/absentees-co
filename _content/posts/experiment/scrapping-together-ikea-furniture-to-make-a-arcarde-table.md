@@ -12,4 +12,4 @@ The bits:
 * Recycled LCD monitor
 * Raspberry Pi 3
 * 3D printed screen mounts and Pi case
-* [RetroPie OS](https://retropie.org.uk/)
+* [RetroPie OS ↗](https://retropie.org.uk/)

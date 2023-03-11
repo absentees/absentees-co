@@ -13,8 +13,8 @@ More recently i've become a fan of [are.na](https://www.are.na/)
 
 The bits:
 
-* [Netlify CI](https://www.netlify.com/)
-* [Heroku](https://www.heroku.com/) Daily Schedular with a Node script
-* [Metalsmith](https://metalsmith.io/)
-* [Pageres](https://github.com/sindresorhus/pageres) (uses PhantomJS)
-* [DatoCMS](https://www.datocms.com/)
+* [Netlify CI ↗](https://www.netlify.com/)
+* [Heroku ↗](https://www.heroku.com/) Daily Schedular with a Node script
+* [Metalsmith ↗](https://metalsmith.io/)
+* [Pageres ↗](https://github.com/sindresorhus/pageres) (uses PhantomJS)
+* [DatoCMS ↗](https://www.datocms.com/)
