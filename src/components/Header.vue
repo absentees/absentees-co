@@ -2,7 +2,7 @@
 	<header class="header">
 		<p id="title" class="title">Scott Blissett — Product Designer</p>
 		<p id="bio">
-			Senior product designer working with <a href="http://beem.com.au">Beem</a>, based in Sydney, Australia.
+			Senior product designer working with <a target="_blank" href="https://wearecowry.com.au/">Cowry</a>, based in Sydney, Australia.
 		</p>
 		<nav>
 			<g-link to="/">Home</g-link>
