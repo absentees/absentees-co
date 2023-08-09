@@ -6,6 +6,15 @@ backend:
 media_folder: "static/images/uploads" # Media files will be stored in the repo under static/images/uploads
 public_folder: "/images/uploads" # The src attribute for uploaded media will begin with /images/uploads
 collections:
+  - name: "writing"
+    label: "Writing"
+    folder: "_content/posts/writing" # The path to the folder where the documents are stored
+    slug: "{{slug}}"
+    create: true # Allow users to create new documents in this collection
+    fields:
+      - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}
   - name: "project" # Used in routes, e.g., /admin/collections/blog
     label: "Project" # Used in the UI
     folder: "_content/posts/project" # The path to the folder where the documents are stored

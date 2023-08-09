@@ -12,6 +12,13 @@ module.exports = {
 		{
 			use: "@gridsome/source-filesystem",
 			options: {
+				typeName: "Writing",
+				path: "_content/posts/writing/**/*.md"
+			}
+		},
+		{
+			use: "@gridsome/source-filesystem",
+			options: {
 				typeName: "Experiments",
 				path: "_content/posts/experiment/**/*.md"
 			},

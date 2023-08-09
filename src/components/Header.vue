@@ -6,11 +6,12 @@
 		</p>
 		<nav>
 			<g-link to="/">Home</g-link>
-			<g-link to="/small-websites">Small web</g-link>
-			<g-link to="/experiments/">Experiments</g-link>
-			<g-link to="/reads/">Reads</g-link>
-			<g-link to="/hyperlinks/">Hyperlinks</g-link>
 			<g-link to="/cv/">CV</g-link>
+			<g-link to="/experiments/">Experiments</g-link>
+			<g-link to="/hyperlinks/">Hyperlinks</g-link>
+			<g-link to="/reads/">Reads</g-link>
+			<g-link to="/small-websites">Small web</g-link>
+			<g-link to="/writings">Writings</g-link>
 		</nav>
 		<div id="external-links">
 			<a target="_blank" href="https://github.com/absentees">Github ↗</a>
