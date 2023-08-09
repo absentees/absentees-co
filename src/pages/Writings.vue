@@ -2,8 +2,8 @@
     <Layout>
         <p>Some more thoughts and thinking from yet another Product Designer. Views and opinions are my own.</p>
         <ul class="links">
-            <li v-for="edge in $page.allWriting.edges" :key="edge.node.id">
-                <a :href="edge.node.slug" rel="noopener noreferrer">{{
+            <li v-for="edge in $page.allWritings.edges" :key="edge.node.id">
+                <a :href="edge.node.path" rel="noopener noreferrer">{{
                     edge.node.title
                 }}</a>
             </li>
@@ -13,11 +13,12 @@
 
 <page-query>
 query {
-  allWriting {
+  allWritings {
     edges {
       node {
         id
         title
+        path
       }
     }
   }
@@ -27,7 +28,7 @@ query {
 <script>
 export default {
     metaInfo: {
-        title: "Writing",
+        title: "Writings",
         meta: []
     }
 };

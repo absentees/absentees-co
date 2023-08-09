@@ -8,7 +8,7 @@ public_folder: "/images/uploads" # The src attribute for uploaded media will beg
 collections:
   - name: "writing"
     label: "Writing"
-    folder: "_content/posts/writing" # The path to the folder where the documents are stored
+    folder: "_content/posts/writings" # The path to the folder where the documents are stored
     slug: "{{slug}}"
     create: true # Allow users to create new documents in this collection
     fields:

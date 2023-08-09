@@ -12,7 +12,7 @@ module.exports = {
 		{
 			use: "@gridsome/source-filesystem",
 			options: {
-				typeName: "Writing",
+				typeName: "Writings",
 				path: "_content/posts/writing/**/*.md"
 			}
 		},
@@ -61,6 +61,9 @@ module.exports = {
 			},
 		},
 	],
+	templates: {
+		Writings: "/writing/:title",
+	},
 	transformers: {
 		//Add markdown support to all file-system sources
 		remark: {

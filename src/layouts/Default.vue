@@ -84,12 +84,27 @@ a {
   }
 }
 
+h1, h2, h3, h4 {
+  color: black;
+  @media (prefers-color-scheme: dark) {
+    color: white;
+  }
+}
+
+p {
+  color: rgb(81, 81, 81);
+  @media (prefers-color-scheme: dark) {
+    color: #959595;
+  }
+}
+
 h1 {
   font-weight: 400;
   font-size: 1rem;
   line-height: 1em;
   margin-top: 0;
   margin-bottom: 2em;
+
 }
 
 h2 {
