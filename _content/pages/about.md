@@ -1,9 +1,13 @@
 ---
 jobs:
-  - where: Cowry (Australian Payments Plus)
-    years: September 2022 - Present
+  - where: Australian Payments Plus
+    years: September 2023 - Present
+    role: Principle Product Designer (Open Payments)
+    description: Leading the product design craft and disclipline within the Open Payments team to deliver the best payment platform experiences in Australia.
+  - where: Australian Payments Plus
+    years: September 2022 - September 2023 (1 year)
     role: Senior Product Designer
-    description: Working with the incredible Cowry Design Team to deliver the best payment platform experiences in Australia, from consumers to merchants and everyone in between, across both native to web platforms.
+    description:
   - where: Pollen
     years: July 2019 - September 2022 (3 years)
     role: Senior Product Designer
