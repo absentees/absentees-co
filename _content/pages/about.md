@@ -3,7 +3,7 @@ jobs:
   - where: Australian Payments Plus
     years: September 2023 - Present
     role: Principle Product Designer (Open Payments)
-    description: Leading the product design craft and disclipline within the Open Payments team to deliver the best payment platform experiences in Australia.
+    description: Leading the product design craft and discipline within the Open Payments team to deliver the best payment platform experiences in Australia.
   - where: Australian Payments Plus
     years: September 2022 - September 2023 (1 year)
     role: Senior Product Designer
