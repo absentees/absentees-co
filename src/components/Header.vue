@@ -2,7 +2,7 @@
 	<header class="header">
 		<p id="title" class="title">Scott Blissett — Product Designer</p>
 		<p id="bio">
-			Senior product designer working with <a target="_blank" href="https://www.auspayplus.com.au">Cowry (Australian Payments Plus)</a>, based in Sydney, Australia.
+			Principal product designer at <a target="_blank" href="https://www.auspayplus.com.au">Australian Payments Plus</a>, based in Sydney, Australia.
 		</p>
 		<nav>
 			<g-link to="/">Home</g-link>
