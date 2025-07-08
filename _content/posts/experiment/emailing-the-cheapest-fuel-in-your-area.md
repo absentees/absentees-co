@@ -8,3 +8,5 @@ Fuel Check notifier was an idea for a project to try out the some of the AI codi
 It has a simple frontend, sign up and add your postcode. Then at a certain time daily a cron job finds the cheapest fuel and send out an email notification to let you know how much and where.
 
 There are plenty of apps that do the same thing here but I'm the sort of person who checks their emails in the morning and this was handy for me.
+
+[NSW Fuel Check Notifier ↗](https://fuelchecknotifier.app)
