@@ -2,7 +2,8 @@
 	<header class="header">
 		<p id="title" class="title">Scott Blissett — Product Designer</p>
 		<p id="bio">
-			Principal product designer at <a target="_blank" href="https://www.auspayplus.com.au">Australian Payments Plus</a>, based in Sydney, Australia.
+			Product Design Lead at <a target="_blank" href="https://www.auspayplus.com.au">Australian Payments Plus</a>,
+			based in Sydney, Australia.
 		</p>
 		<nav>
 			<g-link to="/">Home</g-link>
@@ -63,7 +64,7 @@ header {
 }
 
 #external-links {
-	> a {
+	>a {
 		display: inline-block;
 		margin-right: 1rem;
 	}
@@ -74,13 +75,14 @@ nav {
 	font-size: 1rem;
 	margin-bottom: 1rem;
 
-	> a {
+	>a {
 		display: inline-block;
 		margin-right: 1rem;
 	}
 
 	a {
 		opacity: 0.6;
+
 		&.active--exact {
 			opacity: 1;
 		}
